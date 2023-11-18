@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>forest</title>
+
+</head>
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+
+    background-image: url(pictures/seabeache.png);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+  }
+
+
+  .navbar {
+    width: 100%;
+    height: 10vh;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+    box-shadow: 5px 5px 7px rgba(255, 252, 252, 0.8);
+
+  }
+
+  .navigation {
+
+    align-items: center;
+    padding: 2 1%;
+    margin-left: 7%;
+    padding-top: 17px;
+  }
+
+  .navbar h2 {
+    color: red;
+    width: 45%;
+    font-weight: bold;
+    opacity: 10;
+  }
+
+  .navbar .blue {
+    color: white;
+  }
+
+  .navbar ul {
+    width: 45%;
+    overflow: hidden;
+    margin-left: 45%;
+    margin-top: -17px;
+    font-size: 1.2rem;
+
+  }
+
+  .navbar li {
+    float: right;
+    list-style: none;
+
+  }
+
+  .navbar li a {
+    text-decoration: none;
+    padding: 25px;
+    color: white;
+    opacity: 10;
+  }
+
+
+
+
+
+  .navbar li a :hover {
+    color: rgb(250, 84, 54);
+
+
+  }
+
+  .heading {
+    width: 70%;
+    height: 20vh;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1px);
+    box-shadow: 5px 5px 7px rgba(255, 255, 255, 0.8);
+    margin-top: 5%;
+    margin-left: 15%;
+    border-radius: 20px;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+  .heading h1 {
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 4rem;
+  }
+
+  /* //cards */
+
+  .card {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+
+    /* background: #fff; */
+    background: rgba(53, 53, 53, 0.7);
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 9%;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+    margin-left: 10%;
+  }
+
+  .card:hover {
+    height: 520px;
+  }
+
+  .imgbox1 {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    padding: 20px 20px;
+    transform: translateY(-80px);
+    z-index: 99;
+  }
+
+  .img1 {
+    width: 80%;
+    height: 40vh;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+    z-index: -7;
+    margin-left: 10%;
+
+  }
+
+  .content {
+
+    padding: 20px 60px;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+    margin-top: -27%;
+    font-size: 1.04rem;
+    text-decoration: wavy;
+    color: aliceblue;
+  }
+
+  .card:hover>.content {
+    opacity: 99;
+    transform: translateY(-70px);
+  }
+
+
+
+  .name {
+    color: red;
+    padding-top: 60px;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+    text-align: center;
+
+  }
+
+  .howtogo1 {
+    color: hsl(0, 0%, 100%);
+    float: right;
+    margin-top: -23%;
+    margin-right: 17%;
+    font-size: 1.5rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+  .howtogo1 :hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .para1 {
+    color: aliceblue;
+    padding-right: 10%;
+    margin-left: 55%;
+    margin-top: -13%;
+    font-size: 1.2rem;
+  }
+
+
+
+  /* card2 */
+
+
+  .card2 {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+    padding: 30px 50px;
+    /* background: #fff; */
+    background: rgba(61, 58, 58, 0.7);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    color: aliceblue;
+    margin-top: 15%;
+    box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+    margin-left: 50%;
+  }
+
+  .card2:hover {
+    height: 520px;
+  }
+
+  .imgbox2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+    z-index: 99;
+  }
+
+  .img2 {
+    width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+    z-index: -7;
+
+  }
+
+  .content2 {
+
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+    margin-top: -25%;
+    font-size: 1.04rem;
+    text-decoration: wavy;
+  }
+
+  .card2:hover>.content2 {
+    opacity: 99;
+    transform: translateY(-70px);
+  }
+
+
+
+  .name2 {
+    color: red;
+    padding-top: 60px;
+    text-align: center;
+    font-size: 2rem;
+
+
+  }
+
+  .howtogo2 {
+    color: aliceblue;
+    margin-left: 15%;
+    margin-top: -23%;
+    font-size: 1.5rem;
+  }
+
+  .howtogo2 :hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .para2 {
+    color: aliceblue;
+    padding-left: 10%;
+    margin-right: 55%;
+    padding-top: 20px;
+    font-size: 1.2rem;
+  }
+
+
+
+
+
+  /* card3 */
+
+
+
+  .card3 {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+    padding: 30px 50px;
+    /* background: #fff; */
+    background: rgba(70, 70, 70, 0.7);
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 20%;
+    box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+    margin-left: 10%;
+  }
+
+  .card3:hover {
+    height: 520px;
+  }
+
+  .imgbox3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+    z-index: 99;
+    margin-top: 1%;
+
+  }
+
+  .img3 {
+    width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+  }
+
+  .content3 {
+
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+    margin-top: -25%;
+    font-size: 1.04rem;
+    text-decoration: wavy;
+    color: aliceblue;
+  }
+
+  .card3:hover>.content3 {
+    opacity: 99;
+    transform: translateY(-70px);
+  }
+
+
+
+  .name3 {
+    color: red;
+    padding-top: 50px;
+
+    text-align: center;
+    font-size: 2rem;
+
+
+  }
+
+  .howtogo3 {
+    color: aliceblue;
+    float: right;
+    margin-top: -23%;
+    margin-right: 17%;
+    font-size: 1.5rem;
+  }
+
+  .howtogo3 :hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .para3 {
+    color: aliceblue;
+    padding-right: 10%;
+    margin-left: 55%;
+    margin-top: -13%;
+    font-size: 1.2rem;
+  }
+
+  /* cards4 */
+
+  .card4 {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+    padding: 30px 50px;
+    /* background: #fff; */
+    background: rgba(61, 58, 58, 0.7);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    color: aliceblue;
+    margin-top: 15%;
+    box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+    margin-left: 50%;
+  }
+
+  .card4:hover {
+    height: 620px;
+  }
+
+  .imgbox4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+    z-index: 99;
+  }
+
+  .img4 {
+    width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+  }
+
+  .content4 {
+
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+    margin-top: -50%;
+    font-size: 1.04rem;
+    text-decoration: wavy;
+  }
+
+  .card4:hover>.content4 {
+    opacity: 99;
+    transform: translateY(-70px);
+  }
+
+
+
+  .name4 {
+    color: red;
+    padding-top: 50px;
+
+    text-align: center;
+    font-size: 2rem;
+
+
+  }
+
+  .howtogo4 {
+    color: rgb(0, 0, 0);
+    margin-left: 15%;
+    margin-top: -23%;
+    font-size: 1.5rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+  .howtogo4 :hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .para4 {
+    color: rgb(0, 0, 0);
+    padding-left: 10%;
+    margin-right: 55%;
+    padding-top: 20px;
+    font-size: 1.2rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+
+
+  /* card5 */
+
+  .card5 {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+    padding: 30px 50px;
+    /* background: #fff; */
+    background: rgba(61, 61, 61, 0.7);
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 20%;
+    box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+    margin-left: 10%;
+    overflow: hidden;
+  }
+
+  .card5:hover {
+    height: 550px;
+  }
+
+  .circle1 {
+    width: 38%;
+    height: 23vh;
+    background-color: rgb(211, 161, 231);
+    backdrop-filter: blur(1px);
+    margin-top: -20%;
+    margin-left: -20%;
+    float: left;
+    border-radius: 80px;
+    z-index: -99;
+    opacity: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .circle2 {
+    width: 30%;
+    height: 20vh;
+    background-color: red;
+    padding-right: -20%;
+    margin-bottom: 20%;
+    float: right;
+    border-radius: 50px;
+  }
+
+  .imgbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+    z-index: 99;
+    flex: auto;
+    padding-top: 5%;
+  }
+
+  .img5 {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+
+  }
+
+  .content5 {
+
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+    margin-top: -32%;
+    font-size: 1.04rem;
+    text-decoration: wavy;
+    color: aliceblue;
+    z-index: -99;
+  }
+
+  .card5:hover>.content5 {
+    opacity: 99;
+    transform: translateY(-70px);
+  }
+
+
+
+  .name5 {
+    color: red;
+    float: left;
+    font-size: 1.7rem;
+    margin-top: -3%;
+    padding: 2px 2px;
+    margin-left: 7%;
+    text-shadow: 2px 1px black;
+
+  }
+
+  .howtogo5 {
+    color: rgb(10, 10, 10);
+    float: right;
+    margin-top: -23%;
+    margin-right: 17%;
+    font-size: 1.5rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+  .howtogo5 :hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .para5 {
+    color: rgb(2, 2, 2);
+    padding-right: 10%;
+    margin-left: 55%;
+    margin-top: -13%;
+    font-size: 1.2rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+  /* card6 */
+
+  .card6 {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+    padding: 30px 50px;
+    /* background: #fff; */
+    background: rgba(61, 58, 58, 0.7);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    color: aliceblue;
+    margin-top: 15%;
+    box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+    margin-left: 50%;
+  }
+
+  .card6:hover {
+    height: 620px;
+  }
+
+  .imgbox6 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+    z-index: 99;
+  }
+
+  .img6 {
+    width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+  }
+
+  .content6 {
+
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+    margin-top: -50%;
+    font-size: 1.04rem;
+    text-decoration: wavy;
+  }
+
+  .card6:hover>.content6 {
+    opacity: 99;
+    transform: translateY(-70px);
+  }
+
+
+
+  .name6 {
+    color: red;
+    padding-top: 50px;
+
+    text-align: center;
+    font-size: 2rem;
+
+
+  }
+
+  .howtogo6 {
+    color: rgb(0, 0, 0);
+    margin-left: 15%;
+    margin-top: -23%;
+    font-size: 1.5rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+  .howtogo6 :hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .para6 {
+    color: rgb(0, 0, 0);
+    padding-left: 10%;
+    margin-right: 55%;
+    padding-top: 20px;
+    font-size: 1.2rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+
+  /* card7 */
+
+
+  .card7 {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+    padding: 30px 50px;
+    /* background: #fff; */
+    background: rgba(61, 61, 61, 0.7);
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 20%;
+    box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+    margin-left: 10%;
+    overflow: hidden;
+  }
+
+  .card7:hover {
+    height: 550px;
+  }
+
+  .circle1 {
+    width: 38%;
+    height: 23vh;
+    background-color: rgb(211, 161, 231);
+    backdrop-filter: blur(1px);
+    margin-top: -20%;
+    margin-left: -20%;
+    float: left;
+    border-radius: 80px;
+    z-index: -99;
+    opacity: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .circle2 {
+    width: 30%;
+    height: 20vh;
+    background-color: red;
+    padding-right: -20%;
+    margin-bottom: 20%;
+    float: right;
+    border-radius: 50px;
+  }
+
+  .imgbox7 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+    z-index: 99;
+    flex: auto;
+    padding-top: 5%;
+  }
+
+  .img7 {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+
+  }
+
+  .content7 {
+
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+    margin-top: -32%;
+    font-size: 1.04rem;
+    text-decoration: wavy;
+    color: rgb(255, 255, 255);
+    z-index: -99;
+  }
+
+  .card7:hover>.content7 {
+    opacity: 99;
+    transform: translateY(-70px);
+  }
+
+
+
+  .name7 {
+    color: red;
+    font-size: 1.9rem;
+    padding: 2px 2px;
+    text-align: start;
+    text-shadow: 2px 1px black;
+    margin-top: 7%;
+    text-align: center;
+
+  }
+
+  .howtogo7 {
+    color: rgb(0, 0, 0);
+    float: right;
+    margin-top: -23%;
+    margin-right: 17%;
+    font-size: 1.5rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+  .howtogo7 :hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .para7 {
+    color: rgb(0, 0, 0);
+    padding-right: 10%;
+    margin-left: 55%;
+    margin-top: -13%;
+    font-size: 1.2rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+  /* card8 */
+
+  .card8 {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+    padding: 30px 50px;
+    /* background: #fff; */
+    background: rgba(61, 58, 58, 0.7);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    margin-top: 15%;
+    box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+    margin-left: 50%;
+    overflow: hidden;
+  }
+
+  .card8:hover {
+    height: 620px;
+  }
+
+  .circle8 {
+    width: 20%;
+    height: 12vh;
+    background-color: rgb(190, 255, 165);
+    backdrop-filter: blur(1px);
+    border-radius: 50px;
+    margin-top: -18%;
+    float: right;
+    margin-right: -7%;
+  }
+
+
+  .imgbox8 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+    z-index: 99;
+  }
+
+  .img8 {
+    width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+  }
+
+  .content8 {
+     color: white;
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+    margin-top: -50%;
+    font-size: 1.04rem;
+    text-decoration: wavy;
+    text-shadow: 2px 2px 2px 2px black;
+  }
+
+  .card8:hover>.content8 {
+    opacity: 99;
+    transform: translateY(-70px);
+  }
+
+
+
+  .name8 {
+    color: red;
+    padding-top: 50px;
+
+    text-align: center;
+    font-size: 1.9rem;
+
+
+  }
+
+  .howtogo8 {
+    color: rgb(0, 0, 0);
+    margin-left: 15%;
+    margin-top: -23%;
+    font-size: 1.5rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+  .howtogo8 :hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .para8 {
+    color: rgb(3, 3, 3);
+    padding-left: 10%;
+    margin-right: 55%;
+    padding-top: 20px;
+    font-size: 1.2rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+  /* card9 */
+  .card9 {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+    padding: 30px 50px;
+    /* background: #fff; */
+    background: rgba(61, 61, 61, 0.7);
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 20%;
+    box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+    margin-left: 10%;
+    overflow: hidden;
+  }
+
+  .card9:hover {
+    height: 550px;
+  }
+
+  .circle9 {
+    width: 25%;
+    height: 15vh;
+    background-color: blueviolet;
+    border-radius: 60px;
+    margin-left: -20%;
+    margin-top: -20%;
+    box-shadow: 5px 5px 10px rgba(3, 3, 3, 0.5);
+    backdrop-filter: blur(1px);
+  }
+
+  .circle7 {
+    width: 50%;
+    height: 30vh;
+    background-color: #FF0063;
+    border-radius: 60px;
+    float: right;
+    box-shadow: 5px 5px 10px rgba(3, 3, 3, 0.5);
+  }
+
+  .imgbox9 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+    z-index: 99;
+    flex: auto;
+    padding-top: 5%;
+  }
+
+  .img9 {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+
+  }
+
+  .content9 {
+
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+    margin-top: -32%;
+    font-size: 1.04rem;
+    text-decoration: wavy;
+    color: rgb(255, 255, 255);
+    z-index: -99;
+  }
+
+  .card9:hover>.content9 {
+    opacity: 99;
+    transform: translateY(-70px);
+  }
+
+
+
+  .name9 {
+    color: red;
+    font-size: 1.9rem;
+    padding: 2px 2px;
+    text-align: start;
+    text-shadow: 2px 1px black;
+    margin-top: 7%;
+    text-align: center;
+
+  }
+
+  .howtogo9 {
+    color: rgb(0, 0, 0);
+    float: right;
+    margin-top: -23%;
+    margin-right: 17%;
+    font-size: 1.5rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+  .howtogo9 :hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .para9 {
+    color: rgb(0, 0, 0);
+    padding-right: 10%;
+    margin-left: 55%;
+    margin-top: -13%;
+    font-size: 1.2rem;
+  }
+
+  /* card10 */
+
+  .card10 {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+    padding: 30px 50px;
+    /* background: #fff; */
+    background: rgba(61, 58, 58, 0.7);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    color: aliceblue;
+    margin-top: 10%;
+    box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+    margin-left: 50%;
+    overflow: hidden;
+  }
+
+  .circle10 {
+    width: 30%;
+    height: 18vh;
+    background: rgba(252, 235, 7, 0.897);
+    border-radius: 60px;
+    z-index: -99;
+    margin-top: -25%;
+    margin-left: 81%;
+    box-shadow: 1px 1px 1px 2px rgb(0, 0, 0);
+    backdrop-filter: blur(1px);
+  }
+
+  .circle11 {
+    width: 50%;
+    height: 26vh;
+    border-radius: 100px;
+    background: rgba(45, 255, 238, 0.4);
+    float: left;
+    margin-top: 20%;
+    z-index: -9;
+    margin-left: -45%;
+    backdrop-filter: blur(1px);
+    box-shadow: 1px 1px 1px 2px rgb(0, 0, 0);
+  }
+
+  .card10:hover {
+    height: 620px;
+  }
+
+  .imgbox10 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+    z-index: 99;
+  }
+
+  .img10 {
+    width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+  }
+
+  .content10 {
+
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+    margin-top: -50%;
+    font-size: 1.04rem;
+    text-decoration: wavy;
+  }
+
+  .card10:hover>.content10 {
+    opacity: 99;
+    transform: translateY(-70px);
+  }
+
+
+
+  .name10 {
+    color: red;
+    padding-top: 50px;
+    opacity: 99;
+    text-align: center;
+    font-size: 1.9rem;
+    text-shadow: 3px 3px 3px 3px black;
+
+  }
+
+  .howtogo10 {
+    color: rgb(0, 0, 0);
+    margin-left: 15%;
+    margin-top: -23%;
+    font-size: 1.5rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+  .howtogo10 :hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .para10 {
+    color: rgb(0, 0, 0);
+    padding-left: 10%;
+    margin-right: 55%;
+    padding-top: 20px;
+    font-size: 1.2rem;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+
+  /* footer */
+
+  .footer {
+    width: 100%;
+    background-color: black;
+    height: 30vh;
+    margin-top: 20%;
+    box-shadow: 2px 2px 2px 5px red;
+
+  }
+
+  .contain {
+    margin-bottom: 50px;
+  }
+
+  .footer .col {
+    width: 190px;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  .footer .col h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 17px;
+    padding: 10px 0;
+    color: #FF0063;
+    text-transform: uppercase;
+  }
+
+  .footer .col ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .footer .col ul li {
+    color: white;
+    font-size: 12px;
+    padding: 5px 0px;
+  }
+
+  .address ul li {
+    display: inline-block;
+    padding-right: 5px !important;
+  }
+
+  .footer .col ul li:hover {
+    cursor: pointer;
+    color: lightgray;
+    font-weight: bold;
+  }
+
+  .clearfix {
+    clear: both;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    .contain {
+      width: 1200px;
+      margin: 0 auto;
+    }
+  }
+
+  @media only screen and (max-width: 1139px) {
+    .contain .address {
+      width: 1000px;
+      display: block;
+    }
+
+    .address h2 {
+      margin: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 950px) {
+    .footer .col {
+      width: 33%;
+    }
+
+    .footer .col h2 {
+      font-size: 14px;
+    }
+
+    .footer .col ul li {
+      font-size: 13px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .footer .col {
+      width: 50%;
+    }
+
+    .footer .col h2 {
+      font-size: 14px;
+    }
+
+    .footer .col ul li {
+      font-size: 13px;
+    }
+  }
+
+  @media only screen and (max-width: 340px) {
+    .footer .col {
+      width: 100%;
+    }
+  }
+</style>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="navigation">
+        <h2><span class="blue">Travel</span>Ez</h2>
+        <ul>
+
+          <li><a href="#"> <b>GELLARY</b></a></li>
+          <li><a href="#"><b>ABOUT</b></a></li>
+          <li><a href="#"><b>FEEDBACK</b></a></li>
+          <li><a href="#"> <b>HOME</b></a></li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="heading">
+    <h1><b>SEA BEACHES</b></h1>
+  </div>
+
+  <div class="card">
+
+    <div class="imgbox">
+      <h1 class="name">DIGHA</h1>
+      <img class="img1" src="pictures\digha.png" />
+    </div>
+
+    <div class="content">
+      <!-- <h2>keep Smiling</h2> -->
+      <p>
+        One of the most popular beaches in West Bengal, Digha is a shallow sand beach which remains crowded throughout the year.
+         You can enjoy trying different sports activities, sitting near the shore on the long stretch of land extending up to 7 km or visiting nearby tourist attractions.
+       
+      </p>
+    </div>
+  </div>
+
+  <div class="howtogo1">
+    <h1><b>HOW TO GO</b></h1>
+  </div>
+  <div class="para1"><b>
+    The rail connection with Howrah and Santragachi (a suburb near Kolkata) runs via Tamluk. Several expresses and superfast trains
+    connect the beach town with Kolkata everyday. The journey time is 3nad a half hours approximately.
+    </b></div>
+
+
+
+  <div class="card2">
+
+    <div class="imgbox2">
+      <h1 class="name2"> Mandarmani</h1>
+      <img class="img2" src="pictures\mandarmani.png" />
+    </div>
+
+    <div class="content2">
+      <!-- <h2>keep Smiling</h2> -->
+      <p>
+        Mandarmani is another famous beach in West Bengal that stretches almost 13 km. Located along the route of Kolkata to Digha, people come here to enjoy the low waves and red crabs found on the coastline of this serene beach.
+         The major highlight of Mandarmani includes taking a stroll at the beach, trying authentic seafood and sipping coconut water.
+      </p>
+    </div>
+  </div>
+
+  <div class="howtogo2">
+    <h1><b>HOW TO GO</b></h1>
+  </div>
+  <div class="para2"><b>Mandarmani can be best reached by road. The beach driving that was fun while reaching the resorts in Mandarmani is prohibited now. And there is a road from the backside of resorts that will lead you to your hotel. 
+    To reach Mandarmani, one has to take a bus towards Digha and get down at Chawalkhola, from where small shared vehicles are available to reach Mandarmani
+    </b></div>
+
+
+
+
+  <div class="card3">
+
+    <div class="imgbox3">
+      <h1 class="name3">Tajpur</h1>
+      <img class="img3" src="pictures\tajpur.png" />
+    </div>
+
+    <div class="content3">
+      <!-- <h2>keep Smiling</h2> -->
+      <p>
+        Another beach lying on the shore of the Bay of Bengal, Tajpur, is the first choice when one wants to enjoy a secluded beach time. It is an offbeat beach blessed with clear water and lush greenery. Here one can spot tons of crabs along the beach line and have delicious seafood offered by plenty of shacks.
+         It is close to Mandarmani, so one can visit both beaches at once.
+      </p>
+    </div>
+  </div>
+
+  <div class="howtogo3">
+    <h1><b>HOW TO GO</b></h1>
+  </div>
+  <div class="para3"><b>From Balisai. Tajpur beach is another 5 kilometres.
+    Small cars and vans ply on this village road which is runs between large fish ponds.
+    The nearest railway station is Ramnagar which is 8 kilometres away from Tajpur
+    </b></div>
+
+
+
+  <div class="card4">
+
+    <div class="imgbox4">
+      <h1 class="name4">Shankarpur</h1>
+      <img class="img4" src="pictures\sankarpur.png" />
+    </div>
+
+    <div class="content4">
+      <!-- <h2>keep Smiling</h2> -->
+      <p>
+        This virgin beach town is a continuation of Tajpur beach and is unexplored. Tourists can enjoy a lovely view of fishers trailing their nets in the sea on local boats. In addition, the tall trees surrounding the places make the view picture perfect. 
+        Another special thing is enjoying fresh fish and other seafood in its shacks.
+      </p>
+    </div>
+  </div>
+  </div>
+
+  <div class="howtogo4">
+    <h1><b>HOW TO GO</b></h1>
+  </div>
+  <div class="para4"><b>You have to ride a bus that
+    goes to Digha and get down at “14 Mile” or Ramnagar. From there,
+    small cars are available for Shankarpur sea beach.
+    The nearest railway station of Shankarpur is Ramnagar. Ramnagar is 5
+    kilometres away from the sea beach.</b></div>
+
+  <!-- card5 -->
+  <div class="card5">
+    <span class="circle1"></span>
+
+
+    <div class="imgbox">
+      <h1 class="name5">Udaipur Beach</h1>
+      <img class="img5" src="pictures\udaipur.png" />
+    </div>
+
+    <div class="content5">
+      <!-- <h2>keep Smiling</h2> -->
+      <p>
+        Located 2 km away from Digha Udaipur beach is one of the top beaches of West Bengal away from the crowd. The surroundings of this beach are covered with dense casuarina trees and makeshift stalls scattered throughout. 
+        Furthermore, you can either stroll through the deserted beach, or try fresh fish, or indulge in some water sports.
+      </p>
+      <span class="circle2"></span>
+    </div>
+
+  </div>
+  <div class="howtogo5">
+    <h1><b>HOW TO GO</b></h1>
+  </div>
+  <div class="para5"><b> You have to reach Digha by road or by train. And then hire a van from there to reach the beach.</b></div>
+
+  <!-- card6 -->
+
+  <div class="card6">
+
+    <div class="imgbox6">
+      <h1 class="name6"> Diamond Harbour</h1>
+      <img class="img6" src="pictures\diamond.png" />
+    </div>
+
+    <div class="content6">
+      <!-- <h2>keep Smiling</h2> -->
+      <p>
+        Diamond Harbour is a beautiful meeting point where the Hooghly River meets the Bay of Bengal. With stunning scenery and pleasant humid weather, it makes the perfect go-to weekend option for those residing in the capital city of West Bengal, Kolkata.
+         Additionally, there are interesting locations to hit nearby, like Bakkhali beach, the town of Joynagar, etc.
+      </p>
+    </div>
+  </div>
+
+  <div class="howtogo6">
+    <h1><b>HOW TO GO</b></h1>
+  </div>
+  <div class="para6"><b> : If you are visiting Diamond Harbour, keep a note of the following attractions:
+     Ferry ride on Hooghly River Sharisha Ramkrishna Mission Ashram Kalidas Dutta's collection Raichak resort</b>
+  </div>
+
+
+  <!-- card7 -->
+
+
+  <div class="card7">
+
+    <div class="imgbox7">
+      <h1 class="name7">Bakkhali</h1>
+      <img class="img7" src="pictures\bakkhali.png" />
+    </div>
+
+    <div class="content7">
+      <!-- <h2>keep Smiling</h2> -->
+      <p>Bakkhali is a little hamlet near Sundarbans wrapped in the wilderness of West Bengal. It is a crescent-shaped beach which people like to visit from various parts of the world. You will find liquor shops at the beach, but if you are not a fan, you can also enjoy sipping coconuts on the shorelines.
+         The sea is calm and clean, adding to a memorable trip
+      </p>
+    </div>
+  </div>
+
+  <div class="howtogo7">
+    <h1><b>HOW TO GO</b></h1>
+  </div>
+  <div class="para7"><b>The nearest railway station is Namkhana which is connected to Sealdah by trains via
+    Kakkhikantapur and Kakdwip. From Namkhana, you have to cross the river and get a car or
+    a bus from the other side of the river to reach the beach.
+    </b></div>
+
+
+
+  <!-- card8 -->
+
+
+
+  <div class="card8">
+    <div class="circle8"></div>
+    <div class="imgbox8">
+      <h1 class="name8">Junput Beach</h1>
+      <img class="img8" src="pictures\junput.png" />
+    </div>
+
+    <div class="content8">
+      <!-- <h2>keep Smiling</h2> -->
+      <p> Located near Digha, Junput beach is a calm spot surrounded by beautiful Casuarina trees. People generally come here to enjoy some time in solitude. The most famous thing about this beach is it is less crowded and surrounded by many attractions. 
+        One of its museums contains a collection of rare species, including snakes, fish, and other aquatic creatures
+      </p>
+    </div>
+  </div>
+
+  <div class="howtogo8">
+    <h1><b>HOW TO GO</b></h1>
+  </div>
+  <div class="para8"><b> You have to reach Contai first and then follow the road to Junput. Baguran Jalpai comes before Junput.
+     If you are going by train to Digha from Howrah or Santragachi, then get down at Contai station and hire a cab from there to reach your destination
+    </b></div>
+
+
+
+  <!-- card9 -->
+
+
+  <div class="card9">
+    <div class="circle9"></div>
+    <div class="imgbox9">
+      <h1 class="name9">. Sagar Island</h1>
+      <img class="img9" src="pictures\sagar.png" />
+    </div>
+
+    <div class="content9">
+      <!-- <h2>keep Smiling</h2> -->
+      <p> It is located in the southernmost part of West Bengal and is a religious spot for Hindus.
+         Famous by the name Gangasagar, thousands of pilgrims visit this place every year during Makar Sankranti to attend the grand Mela and dip themselves in the holy water of the sea.
+      </p>
+      <div class="circle7"></div>
+    </div>
+  </div>
+
+  <div class="howtogo9">
+    <h1><b>HOW TO GO</b></h1>
+  </div>
+  <div class="para9"><b>  The distance of Harwood Point from Kakdwip is 3 kilometres, and from Namkhana, it is 18 kilometres. You will get a shared cab from both places to reach the boat jetty. The boat will take you across the Muriganga river and drop you at Kachuberia. 
+    From Kachuberia, you have to take another bus to Sagar Island
+    </b></div>
+
+
+  <!-- card10 -->
+
+  <div class="card10">
+    <div class="circle10"></div>
+    <div class="imgbox10">
+      <h1 class="name10"> Henry Island</h1>
+      <img class="img10" src="pictures\henry.png" />
+    </div>
+
+    <div class="content10">
+      <div class="circle11"></div>
+      <!-- <h2>keep Smiling</h2> -->
+      <p> To enjoy the goodness of the sea and the mangrove forest Henry Island can be a perfect tourist spot for you. It has a well-connected road leading to the capital city of West Bengal, Kolkata.
+         Also, while driving to this place, you will find many paddy fields and agricultural areas. Thus, making your drive memorable.v
+      </p>
+    </div>
+
+  </div>
+
+  <div class="howtogo10">
+    <h1><b>HOW TO GO</b></h1>
+  </div>
+  <div class="para10"><b> The nearest rail station is Namkhana. You have to cross the river and take a bus to Bakkhali from the other side.
+     Then go to Henry’s Island by hiring a motorised van or a Toto.
+    </b></div>
+
+
+  <!-- Site footer -->
+
+  <footer>
+    <div class="footer">
+      <div class="contain">
+        <div class="col">
+          <h2>Company</h2>
+          <ul>
+            <li>About us</li>
+            <li> Our Mission</li>
+            <li>Services</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2>Products</h2>
+          <ul>
+            <li>SEO</li>
+            <li>Content Development</li>
+            <li>Digital Marketing</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2>Team</h2>
+          <ul>
+            <li>HR Team</li>
+            <li>Finance Team</li>
+            <li>Content Team</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2>Resources</h2>
+          <ul>
+            <li>Webmail</li>
+            <li>Web templates</li>
+            <li>Email templates</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2>Contact</h2>
+          <ul>
+            <li>+91 9051 XXXXXX</li>
+            <li>033 2464 XXXX</li>
+            <li>abc@gmail.com</li>
+          </ul>
+        </div>
+
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

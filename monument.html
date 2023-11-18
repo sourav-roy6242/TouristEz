@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://use.fontawesome.com/3903c9d7fd.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+    <title>monument</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+
+        background: rgb(20, 12, 31);
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
+
+    .navbar {
+        width: 100%;
+        height: 10vh;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(3px);
+        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.8);
+
+    }
+
+    .navigation {
+
+        align-items: center;
+        padding: 2 1%;
+        margin-left: 7%;
+        padding-top: 17px;
+    }
+
+    .navbar h2 {
+        color: red;
+        width: 45%;
+        font-weight: bold;
+        opacity: 10;
+    }
+
+    .navbar .blue {
+        color: white;
+    }
+
+    .navbar ul {
+        width: 45%;
+        overflow: hidden;
+        margin-left: 45%;
+        margin-top: -17px;
+        font-size: 1.2rem;
+
+    }
+
+    .navbar li {
+        float: right;
+        list-style: none;
+
+    }
+
+    .navbar li a {
+        text-decoration: none;
+        padding: 25px;
+        color: white;
+        opacity: 10;
+    }
+
+
+
+
+
+    .navbar li a :hover {
+        color: rgb(250, 84, 54);
+
+
+    }
+
+    .heading {
+        width: 100%;
+        height: 10vh;
+        background: rgb(236, 89, 89);
+        backdrop-filter: blur(1px);
+        border-radius: 50px;
+        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.8);
+
+    }
+
+    .heading h1 {
+        text-align: center;
+        font-size: 2.7rem;
+        padding-top: .7%;
+        margin-top: 4%;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+    }
+
+    .container {
+        margin-left: 7%;
+        /* z-index: 99; */
+        /* position: relative; */
+    }
+
+    .img {
+        width: 100%;
+        height: 130vh;
+        /* box-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);  */
+        margin-top: 3%;
+        /* z-index: 99; */
+    }
+
+    .container h1 {
+        color: rgb(2, 2, 2);
+        font-size: 2.5rem;
+        z-index: 7;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 10%;
+
+    }
+
+    .container p {
+        color: rgb(2, 2, 2);
+        font-size: 1.6rem;
+        z-index: 7;
+        position: absolute;
+        margin-left: 9%;
+        margin-right: 20%;
+        margin-top: 15%;
+        text-align: center;
+
+    }
+
+    .img2 {
+        width: 40%;
+        height: 35vh;
+        margin-top: -43%;
+        margin-bottom: 70%;
+        margin-left: 10%;
+        box-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        z-index: 7;
+        border-radius: 20px;
+
+
+
+    }
+
+    .how-to-go {
+        color: rgb(5, 5, 5);
+        font-size: 2.5rem;
+        position: absolute;
+        margin-top: -36%;
+        margin-left: 6%;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+
+    }
+
+    .content {
+        color: rgb(5, 5, 5);
+        font-size: 1.5rem;
+        position: absolute;
+        margin-top: -20%;
+        margin-left: -37%;
+        margin-right: 19%;
+    }
+
+
+
+
+
+    .container2 {
+        margin-left: 7%;
+        z-index: 99;
+        position: relative;
+        margin-top: -45%;
+    }
+
+    .img {
+        width: 90%;
+        height: 130vh;
+        /* box-shadow: 5px 5px 7px rgba(255, 34, 34, 0.8); ; */
+
+        z-index: 99;
+    }
+
+    .container2 h1 {
+        color: rgb(2, 2, 2);
+        font-size: 2.5rem;
+
+        z-index: 7;
+
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 10%;
+
+    }
+
+    .container2 p {
+        color: rgb(2, 2, 2);
+        font-size: 1.4rem;
+        z-index: 7;
+        position: absolute;
+        margin-left: 9%;
+        margin-right: 20%;
+        margin-top: 15%;
+        text-align: center;
+
+    }
+
+    .img3 {
+        width: 40%;
+        height: 35vh;
+        margin-top: -43%;
+        margin-bottom: 70%;
+        margin-left: 10%;
+        box-shadow: 7px 7px 8px rgba(7, 7, 7, 0.8);
+        z-index: 7;
+        border-radius: 20px;
+
+
+
+    }
+
+    .how-to-go2 {
+        color: rgb(5, 5, 5);
+        font-size: 2.5rem;
+        position: absolute;
+        margin-top: -36%;
+        margin-left: 6%;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+    }
+
+    .content2 {
+        color: rgb(5, 5, 5);
+        font-size: 1.5rem;
+        position: absolute;
+        margin-top: -22%;
+        margin-left: -40%;
+        margin-right: 19%;
+    }
+
+
+
+
+
+
+
+    .container3 {
+        margin-left: 7%;
+        z-index: 99;
+        position: relative;
+        margin-top: -45%;
+    }
+
+    .img {
+        width: 90%;
+        height: 130vh;
+        /* box-shadow: 5px 5px 7px rgba(255, 34, 34, 0.8); ; */
+
+        z-index: 99;
+    }
+
+    .container3 h1 {
+        color: rgb(2, 2, 2);
+        font-size: 2.5rem;
+
+        z-index: 7;
+
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 10%;
+
+    }
+
+    .container3 p {
+        color: rgb(2, 2, 2);
+        font-size: 1.4rem;
+        z-index: 7;
+        position: absolute;
+        margin-left: 9%;
+        margin-right: 20%;
+        margin-top: 15%;
+        text-align: center;
+
+    }
+
+    .img4 {
+        width: 40%;
+        height: 35vh;
+        margin-top: -43%;
+        margin-bottom: 70%;
+        margin-left: 10%;
+        box-shadow: 7px 7px 8px rgba(7, 7, 7, 0.8);
+        z-index: 7;
+        border-radius: 20px;
+
+
+
+    }
+
+    .how-to-go3 {
+        color: rgb(5, 5, 5);
+        font-size: 2.5rem;
+        position: absolute;
+        margin-top: -36%;
+        margin-left: 6%;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        
+    }
+
+    .content3 {
+        color: rgb(5, 5, 5);
+        font-size: 1.5rem;
+        position: absolute;
+        margin-top: -20%;
+        margin-left: -40%;
+        margin-right: 19%;
+    }
+
+
+
+
+
+    .container4 {
+        margin-left: 7%;
+        z-index: 99;
+        position: relative;
+        margin-top: -45%;
+    }
+
+    .img {
+        width: 90%;
+        height: 130vh;
+        /* box-shadow: 5px 5px 7px rgba(255, 34, 34, 0.8); ; */
+
+        z-index: 99;
+    }
+
+    .container4 h1 {
+        color: rgb(2, 2, 2);
+        font-size: 2.5rem;
+
+        z-index: 7;
+
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 10%;
+
+    }
+
+    .container4 p {
+        color: rgb(2, 2, 2);
+        font-size: 1.4rem;
+        z-index: 7;
+        position: absolute;
+        margin-left: 9%;
+        margin-right: 20%;
+        margin-top: 15%;
+        text-align: center;
+
+    }
+
+    .img5 {
+        width: 40%;
+        height: 35vh;
+        margin-top: -43%;
+        margin-bottom: 70%;
+        margin-left: 10%;
+        box-shadow: 7px 7px 8px rgba(7, 7, 7, 0.8);
+        z-index: 7;
+        border-radius: 20px;
+
+
+
+    }
+
+    .how-to-go4 {
+        color: rgb(5, 5, 5);
+        font-size: 2.5rem;
+        position: absolute;
+        margin-top: -36%;
+        margin-left: 6%;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+    }
+
+    .content4 {
+        color: rgb(5, 5, 5);
+        font-size: 1.5rem;
+        position: absolute;
+        margin-top: -20%;
+        margin-left: -40%;
+        margin-right: 19%;
+    }
+
+
+
+
+
+    .container5 {
+
+        margin-left: 7%;
+        z-index: 99;
+        position: relative;
+        margin-top: -45%;
+    }
+
+    .img {
+        width: 90%;
+        height: 130vh;
+        /* box-shadow: 5px 5px 7px rgba(255, 34, 34, 0.8); ; */
+        z-index: 99;
+    }
+
+    .container5 h1 {
+        color: rgb(2, 2, 2);
+        font-size: 2.5rem;
+        z-index: 7;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 10%;
+
+    }
+
+    .container5 p {
+        color: rgb(2, 2, 2);
+        font-size: 1.4rem;
+        z-index: 7;
+        position: absolute;
+        margin-left: 9%;
+        margin-right: 20%;
+        margin-top: 15%;
+        text-align: center;
+
+    }
+
+    .img6 {
+        width: 40%;
+        height: 35vh;
+        margin-top: -43%;
+        margin-bottom: 70%;
+        margin-left: 10%;
+        box-shadow: 7px 7px 8px rgba(7, 7, 7, 0.8);
+        z-index: 7;
+        border-radius: 20px;
+
+
+
+    }
+
+    .how-to-go5 {
+        color: rgb(5, 5, 5);
+        font-size: 2.5rem;
+        position: absolute;
+        margin-top: -36%;
+        margin-left: 6%;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+    }
+
+    .content5 {
+        color: rgb(5, 5, 5);
+        font-size: 1.5rem;
+        position: absolute;
+        margin-top: -20%;
+        margin-left: -40%;
+        margin-right: 19%;
+    }
+
+
+
+
+
+    .container6 {
+
+        margin-left: 7%;
+        z-index: 99;
+        position: relative;
+        margin-top: -45%;
+    }
+
+    .img {
+        width: 90%;
+        height: 130vh;
+        /* box-shadow: 5px 5px 7px rgba(255, 34, 34, 0.8); ; */
+        z-index: 99;
+    }
+
+    .container6 h1 {
+        color: rgb(2, 2, 2);
+        font-size: 2.5rem;
+        z-index: 7;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 10%;
+
+    }
+
+    .container6 p {
+        color: rgb(2, 2, 2);
+        font-size: 1.4rem;
+        z-index: 7;
+        position: absolute;
+        margin-left: 9%;
+        margin-right: 20%;
+        margin-top: 15%;
+        text-align: center;
+
+    }
+
+    .img7 {
+        width: 40%;
+        height: 35vh;
+        margin-top: -43%;
+        margin-bottom: 70%;
+        margin-left: 10%;
+        box-shadow: 7px 7px 8px rgba(7, 7, 7, 0.8);
+        z-index: 7;
+        border-radius: 20px;
+
+
+
+    }
+
+    .how-to-go6 {
+        color: rgb(5, 5, 5);
+        font-size: 2.5rem;
+        position: absolute;
+        margin-top: -36%;
+        margin-left: 6%;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+    }
+
+    .content6 {
+        color: rgb(5, 5, 5);
+        font-size: 1.5rem;
+        position: absolute;
+        margin-top: -20%;
+        margin-left: -40%;
+        margin-right: 19%;
+    }
+
+
+
+
+
+    .container7 {
+
+        margin-left: 7%;
+        z-index: 99;
+        position: relative;
+        margin-top: -45%;
+    }
+
+    .img {
+        width: 90%;
+        height: 130vh;
+        /* box-shadow: 5px 5px 7px rgba(255, 34, 34, 0.8); ; */
+        z-index: 99;
+    }
+
+    .container7 h1 {
+        color: rgb(2, 2, 2);
+        font-size: 2.5rem;
+        z-index: 7;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 10%;
+
+    }
+
+    .container7 p {
+        color: rgb(2, 2, 2);
+        font-size: 1.4rem;
+        z-index: 7;
+        position: absolute;
+        margin-left: 9%;
+        margin-right: 20%;
+        margin-top: 15%;
+        text-align: center;
+
+    }
+
+    .img8 {
+        width: 40%;
+        height: 35vh;
+        margin-top: -43%;
+        margin-bottom: 70%;
+        margin-left: 10%;
+        box-shadow: 7px 7px 8px rgba(7, 7, 7, 0.8);
+        z-index: 7;
+        border-radius: 20px;
+
+
+
+    }
+
+    .how-to-go7 {
+        color: rgb(5, 5, 5);
+        font-size: 2.5rem;
+        position: absolute;
+        margin-top: -36%;
+        margin-left: 6%;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+    }
+
+    .content7 {
+        color: rgb(5, 5, 5);
+        font-size: 1.5rem;
+        position: absolute;
+        margin-top: -22%;
+        margin-left: -40%;
+        margin-right: 19%;
+    }
+
+
+
+
+
+
+
+    .container8 {
+
+        margin-left: 7%;
+        z-index: 99;
+        position: relative;
+        margin-top: -45%;
+    }
+
+    .img {
+        width: 90%;
+        height: 130vh;
+        /* box-shadow: 5px 5px 7px rgba(255, 34, 34, 0.8); ; */
+        z-index: 99;
+    }
+
+    .container8 h1 {
+        color: rgb(2, 2, 2);
+        font-size: 2.5rem;
+        z-index: 7;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 10%;
+
+    }
+
+    .container8 p {
+        color: rgb(2, 2, 2);
+        font-size: 1.4rem;
+        z-index: 7;
+        position: absolute;
+        margin-left: 9%;
+        margin-right: 20%;
+        margin-top: 15%;
+        text-align: center;
+
+    }
+
+    .img9 {
+        width: 40%;
+        height: 35vh;
+        margin-top: -43%;
+        margin-bottom: 70%;
+        margin-left: 10%;
+        box-shadow: 7px 7px 8px rgba(7, 7, 7, 0.8);
+        z-index: 7;
+        border-radius: 20px;
+
+
+
+    }
+
+    .how-to-go8 {
+        color: rgb(5, 5, 5);
+        font-size: 2.5rem;
+        position: absolute;
+        margin-top: -36%;
+        margin-left: 6%;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+    }
+
+    .content8 {
+        color: rgb(5, 5, 5);
+        font-size: 1.5rem;
+        position: absolute;
+        margin-top: -22%;
+        margin-left: -40%;
+        margin-right: 19%;
+    }
+
+
+
+
+
+    .container9 {
+
+        margin-left: 7%;
+        z-index: 99;
+        position: relative;
+        margin-top: -45%;
+    }
+
+    .img {
+        width: 90%;
+        height: 130vh;
+        /* box-shadow: 5px 5px 7px rgba(255, 34, 34, 0.8); ; */
+        z-index: 99;
+    }
+
+    .container9 h1 {
+        color: rgb(2, 2, 2);
+        font-size: 2.5rem;
+        z-index: 7;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 10%;
+
+    }
+
+    .container9 p {
+        color: rgb(2, 2, 2);
+        font-size: 1.4rem;
+        z-index: 7;
+        position: absolute;
+        margin-left: 9%;
+        margin-right: 20%;
+        margin-top: 15%;
+        text-align: center;
+
+    }
+
+    .img10 {
+        width: 40%;
+        height: 35vh;
+        margin-top: -40%;
+        margin-bottom: 70%;
+        margin-left: 10%;
+        box-shadow: 7px 7px 8px rgba(7, 7, 7, 0.8);
+        z-index: 7;
+        border-radius: 20px;
+
+
+
+    }
+
+    .how-to-go9 {
+        color: rgb(5, 5, 5);
+        font-size: 2.5rem;
+        position: absolute;
+        margin-top: -36%;
+        margin-left: 6%;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+
+    }
+
+    .content9 {
+        color: rgb(5, 5, 5);
+        font-size: 1.5rem;
+        position: absolute;
+        margin-top: -20%;
+        margin-left: -40%;
+        margin-right: 19%;
+    }
+
+
+
+
+
+
+
+    .container10 {
+
+        margin-left: 7%;
+        z-index: 99;
+        position: relative;
+        margin-top: -45%;
+    }
+
+    .img {
+        width: 90%;
+        height: 130vh;
+        /* box-shadow: 5px 5px 7px rgba(255, 34, 34, 0.8); ; */
+        z-index: 99;
+    }
+
+    .container10 h1 {
+        color: rgb(2, 2, 2);
+        font-size: 2.5rem;
+        z-index: 7;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+        ;
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 10%;
+
+    }
+
+    .container10 p {
+        color: rgb(2, 2, 2);
+        font-size: 1.4rem;
+        z-index: 7;
+        position: absolute;
+        margin-left: 9%;
+        margin-right: 20%;
+        margin-top: 15%;
+        text-align: center;
+
+    }
+
+    .img11 {
+        width: 40%;
+        height: 35vh;
+        padding-top: -40%;
+        margin-top: -45%;
+        margin-bottom: 30%;
+        margin-left: 12%;
+        border-radius: 30px;
+        z-index: -7;
+        box-shadow: 7px 7px 8px rgba(7, 7, 7, 0.8);
+
+    }
+
+    /* .img11 {
+        width: 40%;
+        height: 35vh;
+        margin-top: -40%;
+        margin-bottom: 70%;
+        margin-left: 10%;
+        box-shadow: 7px 7px 8px rgba(7, 7, 7, 0.8);
+        z-index: 7;
+        border-radius: 20px;
+
+
+
+    } */
+
+    .how-to-go10 {
+        color: rgb(5, 5, 5);
+        font-size: 2.5rem;
+        position: absolute;
+        margin-top: -36%;
+        margin-left: 6%;
+        text-shadow: 5px 5px 7px rgba(7, 7, 7, 0.8);
+
+    }
+
+    .content10 {
+        color: rgb(5, 5, 5);
+        font-size: 1.5rem;
+        position: absolute;
+        margin-top: -20%;
+        margin-left: -40%;
+        margin-right: 20%;
+    }
+
+
+
+
+    /* footer */
+
+    .footer {
+        width: 100%;
+        background-color: black;
+        height: 30vh;
+        /* margin-top: -40%; */
+        box-shadow: 2px 2px 2px 5px red;
+
+    }
+
+    .contain {
+        margin-bottom: 50px;
+    }
+
+    .footer .col {
+        width: 190px;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .footer .col h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        line-height: 17px;
+        padding: 10px 0;
+        color: #FF0063;
+        text-transform: uppercase;
+    }
+
+    .footer .col ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .footer .col ul li {
+        color: white;
+        font-size: 12px;
+        padding: 5px 0px;
+    }
+
+    .address ul li {
+        display: inline-block;
+        padding-right: 5px !important;
+    }
+
+    .footer .col ul li:hover {
+        cursor: pointer;
+        color: lightgray;
+        font-weight: bold;
+    }
+
+    .clearfix {
+        clear: both;
+    }
+
+    @media only screen and (min-width: 1280px) {
+        .contain {
+            width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+    @media only screen and (max-width: 1139px) {
+        .contain .address {
+            width: 1000px;
+            display: block;
+        }
+
+        .address h2 {
+            margin: 0px;
+        }
+    }
+
+    @media only screen and (max-width: 950px) {
+        .footer .col {
+            width: 33%;
+        }
+
+        .footer .col h2 {
+            font-size: 14px;
+        }
+
+        .footer .col ul li {
+            font-size: 13px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .footer .col {
+            width: 50%;
+        }
+
+        .footer .col h2 {
+            font-size: 14px;
+        }
+
+        .footer .col ul li {
+            font-size: 13px;
+        }
+    }
+
+    @media only screen and (max-width: 340px) {
+        .footer .col {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navigation">
+                <h2><span class="blue">Travel</span>Ez</h2>
+                <ul>
+
+                    <li><a href="#"> <b>GELLARY</b></a></li>
+                    <li><a href="#"><b>ABOUT</b></a></li>
+                    <li><a href="#"><b>FEEDBACK</b></a></li>
+                    <li><a href="#"> <b>HOME</b></a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="heading">
+        <h1><b>M    O    N    U    M    E    N    T</b></h1>
+    </div>
+    <div class="container">
+        <h1><b>VICTORIA MEMORIAL</b></h1>
+        <p><b>It is dedicated to the memory of Queen Victoria, Empress
+                of India from 1876 to 1901. The largest monument to a monarch anywhere in the
+                world, it stands in 64 acres of gardens and is now a museum under the control of
+                the Ministry of Culture</b></p>
+
+        <img class="img" src="pictures\op.png" />
+        <img class="img2" src="pictures\victoria.png" />
+
+        <span class="how-to-go"><b>HOW TO GO</b></span>
+        <span class="content"><b> There is a direct bus departing from Vidyasagar Setu and arriving at
+                Rabindra Sadan. Services depart every 15 minutes, and operate every day. The journey
+                takes approximately 11 min. The distance between Howrah and Victoria Memorial is 4
+                km. The best way to get from Howrah to Victoria Memorial without a car is to bus which
+                takes 23 min and costs ₹20 - ₹30.</b></span>
+
+    </div>
+
+
+    <div class="container2">
+        <h1><b>Dakshineshwar Kali Temple</b></h1>
+        <p><b>Dakshineswar Kali Temple is situated on the
+                banks of the Hooghly River, the Dakshineshwar Kali Temple is one of the famous
+                places of worship not only in Kolkata but all in the whole east India. Rani
+                Rashmoni founded the temple in 1855, a philanthropist and an ardent devotee of
+                goddess Kali. The presiding beauty and belief of the temple is Bhavatarini, an
+                aspect of goddess Kali. The 19th-century mystic sage and reformer Ramakrishna
+                Paramhansa and his wife Sarada Devi were attached to this temple.</b></p>
+
+        <img class="img" src="pictures\op.png" />
+        <img class="img3" src="pictures\kalimandir.png" />
+
+        <span class="how-to-go2"><b>HOW TO GO</b></span>
+        <span class="content2"><b> There is a direct bus departing from Babughat and arriving at
+                Dakhineswar. Services depart every 30 minutes, and operate every day. The journey
+                takes approximately 30 min. There is also a direct train departing from Esplanade and
+                arriving at Dakshineswar. Services depart every 10 minutes, and operate every day.
+                The journey takes approximately 29 min. The best way to get from Howrah to
+                Dakshineswar without a car is to Metro which takes 29 min and costs ₹16 - ₹20.</b></span>
+
+    </div>
+
+
+
+
+    <div class="container3">
+        <h1><b>FORT WILLIAM</b></h1>
+        <p><b>Fort William, citadel of Calcutta (now Kolkata), named for
+                King William III of England. The British East India Company’s main Bengal
+                trading station was moved from Hooghly (now Hugli) to Calcutta in 1690 after a
+                war with the Mughals. Between 1696 and 1702 a fort was built in Calcutta, with
+                the nawab (ruler) of Bengal’s permission.</b></p>
+
+        <img class="img" src="pictures\op.png" />
+        <img class="img4" src="pictures\fort.png" />
+
+        <span class="how-to-go3"><b>HOW TO GO</b></span>
+        <span class="content3"><b> The cheapest way to get from Howrah to Fort William (Station) is to
+                bus and line 36 tram which costs ₹28 - ₹45 and takes 32 min. The distance between
+                Howrah and Fort William (Station) is 4 km. It takes approximately 32 min to get from
+                Howrah to Fort William (Station), including transfers.</b></span>
+
+    </div>
+
+
+
+
+
+    <div class="container4">
+        <h1><b>Writer’s Building</b></h1>
+        <p><b>Designed by Thomas Lyon, a self- styled builder, the
+                Writer's building was constructed in 1777 on behalf of Richard Barwell. The
+                building was meant for the East India Company to house the junior level servants
+                who were then called 'Writers' and hence, the name of the building. The building
+                is built with red brick in Greco-Roman neo-classical style, where are 13 Blocks,
+                Porch, Long iron staircases, Corinthian column & Corridor. The walls of corridor
+                contain various colonial-style statues, sculptures and paintings.</b></p>
+
+        <img class="img" src="pictures\op.png" />
+        <img class="img5" src="pictures\writers.png" />
+
+        <span class="how-to-go4"><b>HOW TO GO</b></span>
+        <span class="content4"><b> The distance between Howrah Railway Station to Writers Building is 4
+                Km by road. You can also find the distance from Howrah Railway Station to Writers
+                Building using other travel options like bus, subway, tram, train and rail. Apart from the
+                trip distance, refer Directions from Howrah Railway Station to Writers Building for road
+                driving directions.</b></span>
+
+    </div>
+
+
+
+
+
+
+    <div class="container5">
+        <h1><b>Shaheed Minar</b></h1>
+        <p><b>Shaheed Minar is an outstanding monument of Bangladesh.
+                It was built to tribute the martyrs who given up their life for language. The main
+                incident had been occurring inside of Dhaka medical college hospital. So a
+                decision was taken to build a memorial adjacent to DMCH.</b></p>
+
+        <img class="img" src="pictures\op.png" />
+        <img class="img6" src="pictures\shaheed.png" />
+
+        <span class="how-to-go5"><b>HOW TO GO</b></span>
+        <span class="content5"><b> The distance between Howrah Railway Station to shaheed minar in is 3
+                Km by road. You can also find the distance from Howrah Railway Station to shaheed
+                minar in using other travel options like bus, subway, tram, train and rail.</b></span>
+
+    </div>
+
+
+
+
+
+
+    <div class="container6">
+        <h1><b>Indian Meuseum</b></h1>
+        <p><b>The Indian Museum is the largest and oldest museum in
+                India and has rare collections of antiques, armour and ornaments, fossils,
+                skeletons, mummies, and Mughal paintings. What Makes It Awesome. The
+                Indian Museum is the largest and oldest museum in the entire Asia-Pacific
+                region. Be prepared to get enthralled by over 100,000 rare exhibits comprising
+                antiques, armour, ornaments, fossils, skeletons, mummies and paintings.</b></p>
+
+        <img class="img" src="pictures\op.png" />
+        <img class="img7" src="pictures\indian.png" />
+
+        <span class="how-to-go6"><b>HOW TO GO</b></span>
+        <span class="content6"><b> There is a direct bus departing from Vidyasagar Setu and arriving at
+                Park Street. Services depart every 30 minutes, and operate every day. The journey
+                takes approximately 17 min. The distance between Howrah and Indian Museum is 4
+                km. Howrah to Indian Museum bus services, operated by CSTC, depart from
+                Vidyasagar Setu station. The bus from Vidyasagar Setu to Park Street takes 17 min
+                including transfers and departs every 30 minutes.</b></span>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="container7">
+        <h1><b>Cooch Behar Palace</b></h1>
+        <p><b>Also known as the “Rajbari”, Cooch Behar Palace was
+                designed on the model of London's Buckingham Palace in the year 1887 during
+                the reign of Maharaja Nripendra Narayan. The Cooch Behar Palace is renowned
+                for its elegance and grandeur of the rich royal heritage of this region.</b></p>
+
+        <img class="img" src="pictures\op.png" />
+        <img class="img8" src="pictures\cooch.png" />
+
+        <span class="how-to-go7"><b>HOW TO GO</b></span>
+        <span class="content7"><b> The cheapest way to get from Howrah to Cooch Behar is to bus which
+                costs ₹850 - ₹1,000 and takes 18h 13m. There is a direct train departing from Howrah
+                Jn and arriving at New Cooch Behar. Services depart twice daily, and operate every
+                day. The journey takes approximately 11h 35m. The distance between Howrah and
+                Cooch Behar is 432 km. The road distance is 580.7 km. It takes approximately 4h 22m
+                to get from Howrah to Cooch Behar, including transfers.</b></span>
+
+    </div>
+
+
+
+
+    <div class="container8">
+        <h1><b>Howrah Bridge</b></h1>
+        <p><b>An iconic landmark in Kolkata, the Howrah Bridge is a huge
+                steel bridge over the Hooghly River. It is considered to be one of the
+                longest cantilever bridges in the world. Also known as Rabindra Setu, it connects
+                Howrah and Kolkata. It carries 100,000 vehicles and countless pedestrians daily.</b></p>
+
+        <img class="img" src="pictures\op.png" />
+        <img class="img9" src="pictures\howrah1.png" />
+
+        <span class="how-to-go8"><b>HOW TO GO</b></span>
+        <span class="content8"><b>The distance between Howrah Station and Howrah Bridge is 333
+                meters. The quickest way to get from Howrah Station to Howrah Bridge is to bus
+                which costs ₹15 - ₹22 and takes 1 min.</b></span>
+
+    </div>
+
+
+
+
+
+
+    <div class="container9">
+        <h1><b>Hazarduari Palace</b></h1>
+        <p><b>Hazarduari Palace is famous for having a thousand
+                entrances. The palace contains just 100 actual doors, with the remaining 900
+                being fake to throw off intruders. The palace was built by Duncun McLeod for
+                the Nawab Najim Humaun Jah, descendent of Mir Zafar. The palace was used
+                for holding meetings as well as for accommodation of high British officials. The
+                palace is now a museum and displays collection of armoury, paintings and
+                portraits of the Nawab..The Hazarduari Palace Museum is a famous tourist
+                attraction exhibiting beautiful artefacts, paintings, weapons like Siraj-Ud-Daula's
+                swords, statues and vintage cars that once belonged to the Nawabs of the 18th
+                century.</b></p>
+
+        <img class="img" src="pictures\op.png" />
+        <img class="img10" src="pictures\hazarduyari.png" />
+
+        <span class="how-to-go9"><b>HOW TO GO</b></span>
+        <span class="content9"><b> The cheapest way to get from Howrah to Hazarduari Palace is to train
+                which costs ₹220 - ₹1,400 and takes 5h 2m. there is no direct train from Howrah to
+                Hazarduari Palace. However, there are services departing from Sealdah and arriving at
+                Murshidabad via Ranaghat Jn. The journey, including transfers, takes approximately 5h
+                2m.</b></span>
+
+    </div>
+
+
+
+
+
+
+    <div class="container10">
+        <h1><b>St. Paul’s Cathedral</b></h1>
+        <p><b>It is said to be the largest church in Kolkata and the first
+                Anglican cathedral in Asia. It was also the first new-built cathedral in the
+                overseas territory of the British Empire.St Paul's Cathedral, Kolkata, India.
+                Architect: William Nairn Forbes (1796-1855), with C. K. Robinson, who was one
+                of the Magistrates of Calcutta.</b></p>
+
+        <img class="img" src="pictures\op.png" />
+        <img class="img11" src="pictures\pauls.png" />
+
+        <span class="how-to-go10"><b>HOW TO GO</b></span>
+        <span class="content10"><b>The cheapest way to get from Howrah to St. Paul's Cathedral is
+                to bus which costs ₹20 - ₹30 and takes 19 min. There is a direct bus departing
+                from Vidyasagar Setu and arriving at Rabindra Sadan. Services depart every 15
+                minutes, and operate every day. The journey takes approximately 11 min. The
+                distance between Howrah and St. Paul's Cathedral is 5 km.</b></span>
+
+    </div>
+
+
+    <!-- Site footer -->
+
+    <footer>
+        <div class="footer">
+            <div class="contain">
+                <div class="col">
+                    <h2>Company</h2>
+                    <ul>
+                        <li>About us</li>
+                        <li> Our Mission</li>
+                        <li>Services</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Products</h2>
+                    <ul>
+                        <li>SEO</li>
+                        <li>Content Development</li>
+                        <li>Digital Marketing</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Team</h2>
+                    <ul>
+                        <li>HR Team</li>
+                        <li>Finance Team</li>
+                        <li>Content Team</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Resources</h2>
+                    <ul>
+                        <li>Webmail</li>
+                        <li>Web templates</li>
+                        <li>Email templates</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Contact</h2>
+                    <ul>
+                        <li>+91 9051 XXXXXX</li>
+                        <li>033 2464 XXXX</li>
+                        <li>abc@gmail.com</li>
+                    </ul>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

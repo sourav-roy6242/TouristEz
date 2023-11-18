@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mountain</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+
+  .navbar {
+    width: 100%;
+    height: 10vh;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    box-shadow: 3px 3px 7px rgba(255, 37, 37, 0.8);
+
+  }
+
+  .navigation {
+
+    align-items: center;
+    padding: 2 1%;
+    margin-left: 7%;
+    padding-top: 17px;
+  }
+
+  .navbar h2 {
+    color: red;
+    width: 45%;
+    font-weight: bold;
+    opacity: 10;
+    font-size: 1.7rem;
+  }
+
+  .navbar .blue {
+    color: black;
+  }
+
+  .navbar ul {
+    width: 45%;
+    overflow: hidden;
+    margin-left: 45%;
+    margin-top: -17px;
+    font-size: 1.2rem;
+
+  }
+
+  .navbar li {
+    float: right;
+    list-style: none;
+
+  }
+
+  .navbar li a {
+    text-decoration: none;
+    padding: 25px;
+    color: white;
+    opacity: 10;
+  }
+
+  .navbar li a :hover {
+    color: rgb(184, 27, 27);
+
+
+  }
+
+  .background {
+
+    box-shadow: 10px 10px 10px rgba(7, 7, 7, 0.8);
+    width: 100%;
+    height: 50vh;
+    margin-top: -5%;
+    /* background-image: url(mountain1.png);
+        background-position: center;
+        position: absolute;
+        background-size: auto; */
+    z-index: -9;
+  }
+
+  .img {
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    z-index: -9;
+  }
+
+  .heading {
+    width: 50%;
+    height: 25vh;
+    text-align: center;
+    margin-top: -16%;
+    font-size: larger;
+    background: rgba(0, 0, 0, 0.3);
+    margin-left: 25%;
+    border-radius: 15px;
+    backdrop-filter: blur(1px);
+    /* box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.7); */
+  }
+
+  .top {
+    padding-top: 50px;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+    font-size: 4rem;
+    color: crimson;
+  }
+
+
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 5%;
+    background-color: #3b1313;
+    box-shadow: 10px 10px 10px rgba(7, 7, 7, 0.8);
+  }
+
+  .card1 {
+    border-radius: 50px;
+    width: 520px;
+    height: 440px;
+    margin: 1em;
+    margin-right: 50%;
+    perspective: 1500px;
+    margin-top: 10%;
+  }
+
+  .card1 .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  }
+
+  .more {
+    display: none;
+  }
+
+  .more:checked~.content {
+    transform: rotateY(180deg);
+  }
+
+  .front,
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 6px;
+  }
+
+  .front .inner,
+  .back .inner {
+    height: 100%;
+    display: grid;
+    padding: 1.5em;
+    transform: translateZ(80px) scale(0.94);
+
+  }
+
+  .front {
+    background-image: url('./kanchan.png.jpg');
+
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .front:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 6px;
+    /* backface-visibility: hidden; */
+    /* background: linear-gradient(40deg, rgba(67, 138, 243, 0.7), rgba(255, 242, 166, 0.7)); */
+  }
+
+  .front .inner {
+    grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+    justify-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .front h2 {
+    grid-row: 2;
+    margin-bottom: 0.3em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fc4c4c;
+    font-weight: 500;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.9);
+  }
+
+  .front .rating {
+    grid-row: 3;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .front .rating i {
+    margin: 0 1px;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    background-color: #222020;
+    border: 2px solid #f0f0f0;
+  }
+
+  .back .inner {
+    grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 0.8em;
+    justify-items: center;
+  }
+
+  .back .info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #e4495e;
+    grid-row: 3;
+    font-size: 1.5rem;
+  }
+
+  .back .info:not(:first-of-type):before {
+    content: "";
+    position: absolute;
+    left: -0.9em;
+    height: 18px;
+    width: 1px;
+    background-color: #ccc;
+  }
+
+  .back .info span {
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  .back .info i {
+    font-size: 1.2em;
+  }
+
+  .back .info i:before {
+    background: linear-gradient(40deg, #355cc9, #438af3);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  .back .info .icon {
+    margin-left: 0.3em;
+  }
+
+  .back .info .icon span {
+    display: block;
+    margin-top: -0.25em;
+    font-size: 0.8em;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .back .description {
+    grid-row: 5;
+    grid-column: 1/-1;
+    font-size: 0.86em;
+    border-radius: 5px;
+    font-weight: 600;
+    line-height: 1.4em;
+    overflow: auto;
+    color: #ffffff;
+    padding-right: 10px;
+  }
+
+
+  .back .button {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  .button {
+    grid-row: -1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    padding: 0 1.5em;
+    height: 3em;
+    line-height: 2.9em;
+    min-width: 3em;
+    background-color: transparent;
+    border: solid 2px #fff;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    left: 50%;
+    backface-visibility: hidden;
+    transition: 0.3s ease-in-out;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .button:hover {
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    text-shadow: none;
+    color: #fd1010;
+  }
+
+  .button.return {
+    line-height: 3em;
+    color: #35abc9;
+    border-color: #d41515;
+    text-shadow: none;
+  }
+
+  .button.return:hover {
+    background-color: #ff0000;
+    color: #fff;
+    box-shadow: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #859ddf;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #355cc9;
+  }
+
+
+  .how-to-go {
+    width: 40%;
+    height: 40vh;
+    background-color: #222020;
+    margin-left: 45%;
+    border-radius: 20px;
+    margin-top: -25%;
+    box-shadow: 10px 10px 10px rgba(7, 7, 7, 0.8);
+  }
+
+  .how-to-go h1 {
+    color: #d41515;
+    text-align: center;
+    padding-top: 4%;
+  }
+
+  .how-to-go p {
+    color: #f1f1f1;
+    text-align: center;
+    padding: 25px 25px;
+  }
+
+
+
+
+  /* card2 */
+
+
+
+
+
+  .wrapper2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 1%;
+    background-color: #582502;
+    box-shadow: 10px 10px 10px rgba(7, 7, 7, 0.8);
+  }
+
+  .card {
+    width: 520px;
+    height: 440px;
+    margin: 1em;
+    perspective: 1500px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 50%;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+
+
+  .card .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+  }
+
+  .more {
+    display: none;
+  }
+
+  .more:checked~.content {
+    transform: rotateY(180deg);
+  }
+
+  .front,
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 6px;
+  }
+
+  .front .inner,
+  .back .inner {
+    height: 100%;
+    display: grid;
+    padding: 1.5em;
+    transform: translateZ(80px) scale(0.94);
+  }
+
+  .front {
+    background-color: #fff;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .front:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 6px;
+    backface-visibility: hidden;
+    background: linear-gradient(40deg, rgba(49, 49, 53, 0.7));
+  }
+
+  .front .inner {
+    grid-template-rows: 5fr 1fr 1fr 2fr 1fr;
+    justify-items: center;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+    color: #d41515;
+  }
+
+  .front h2 {
+    grid-row: 2;
+    margin-bottom: 0.3em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #d34141;
+    font-weight: 500;
+    text-shadow: 9px 9px 9px rgba(2, 2, 2, 0.8);
+    
+  }
+
+  .front .rating {
+    grid-row: 3;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .front .rating i {
+    margin: 0 1px;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    background-color: #222020;
+    border: 2px solid #f0f0f0;
+  }
+
+  .back .inner {
+    grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 0.8em;
+    justify-items: center;
+  }
+
+  .back .info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #ee1414;
+    grid-row: 3;
+  }
+
+  .back .info:not(:first-of-type):before {
+    content: "";
+    position: absolute;
+    left: -0.9em;
+    height: 18px;
+    width: 1px;
+    background-color: #ccc;
+  }
+
+  .back .info span {
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  .back .info i {
+    font-size: 1.2em;
+  }
+
+  .back .info i:before {
+    background: linear-gradient(40deg, #355cc9, #438af3);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  .back .info .icon {
+    margin-left: 0.3em;
+  }
+
+  .back .info .icon span {
+    display: block;
+    margin-top: -0.25em;
+    font-size: 0.8em;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .back .description {
+    grid-row: 5;
+    grid-column: 1/-1;
+    font-size: 0.86em;
+    border-radius: 5px;
+    font-weight: 600;
+    line-height: 1.4em;
+    overflow: auto;
+    color: #f1f1f1;
+    padding-right: 10px;
+  }
+
+  .back .location,
+  .back .price {
+    font-weight: 600;
+    color: #355cc9;
+    grid-row: 1;
+    font-size: 0.86em;
+  }
+
+  .back .location {
+    grid-column: 1/3;
+    justify-self: left;
+  }
+
+  .back .price {
+    grid-column: 3/-1;
+    justify-self: right;
+  }
+
+  .back .button {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  .button {
+    grid-row: -1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    padding: 0 1.5em;
+    height: 3em;
+    line-height: 2.9em;
+    min-width: 3em;
+    background-color: transparent;
+    border: solid 2px #fff;
+    color: #c43d3d;
+    border-radius: 4px;
+    text-align: center;
+    left: 50%;
+    backface-visibility: hidden;
+    transition: 0.3s ease-in-out;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .button:hover {
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    text-shadow: none;
+    color: #f11c1c;
+  }
+
+  .button.return {
+    line-height: 3em;
+    color: #ffffff;
+    border-color: #e4592f;
+    text-shadow: none;
+  }
+
+  .button.return:hover {
+    background-color: #c93f35;
+    color: #fff;
+    box-shadow: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #859ddf;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #355cc9;
+  }
+
+
+  .how-to-go2 {
+    width: 200%;
+    height: 40vh;
+    margin-right: 500%;
+    background-color: #222020;
+    box-shadow: 10px 10px 10px rgba(7, 7, 7, 0.8);
+  }
+
+  .how-to-go2 h1 {
+    color: #d41515;
+    text-align: center;
+    padding-top: 4%;
+  }
+
+  .how-to-go2 p {
+    color: #f1f1f1;
+    text-align: center;
+    padding: 25px 25px;
+  }
+
+
+
+
+
+
+  
+  .footer {
+        width: 100%;
+        background-color: black;
+        height: 30vh;
+        /* margin-top: -40%; */
+        box-shadow: 2px 2px 2px 5px red;
+
+    }
+
+    .contain {
+        margin-bottom: 50px;
+    }
+
+    .footer .col {
+        width: 190px;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .footer .col h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        line-height: 17px;
+        padding: 10px 0;
+        color: #FF0063;
+        text-transform: uppercase;
+    }
+
+    .footer .col ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .footer .col ul li {
+        color: white;
+        font-size: 12px;
+        padding: 5px 0px;
+    }
+
+    .address ul li {
+        display: inline-block;
+        padding-right: 5px !important;
+    }
+
+    .footer .col ul li:hover {
+        cursor: pointer;
+        color: lightgray;
+        font-weight: bold;
+    }
+
+    .clearfix {
+        clear: both;
+    }
+
+    @media only screen and (min-width: 1280px) {
+        .contain {
+            width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+    @media only screen and (max-width: 1139px) {
+        .contain .address {
+            width: 1000px;
+            display: block;
+        }
+
+        .address h2 {
+            margin: 0px;
+        }
+    }
+
+    @media only screen and (max-width: 950px) {
+        .footer .col {
+            width: 33%;
+        }
+
+        .footer .col h2 {
+            font-size: 14px;
+        }
+
+        .footer .col ul li {
+            font-size: 13px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .footer .col {
+            width: 50%;
+        }
+
+        .footer .col h2 {
+            font-size: 14px;
+        }
+
+        .footer .col ul li {
+            font-size: 13px;
+        }
+    }
+
+    @media only screen and (max-width: 340px) {
+        .footer .col {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navigation">
+        <h2><span class="blue"><b>Travel</b></span><b>Ez</b></h2>
+        <ul>
+
+          <li><a href="#"> <b>GELLARY</b></a></li>
+          <li><a href="#"><b>ABOUT</b></a></li>
+          <li><a href="#"><b>FEEDBACK</b></a></li>
+          <li><a href="#"> <b>HOME</b></a></li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="background">
+    <img class="img" src="pictures\mountain1.png" />
+  </div>
+  <div class="heading">
+    <h1 class="top"><b>M O U N T A I N S</b></h1>
+  </div>
+
+
+
+  <div class="wrapper">
+    <div class="card1">
+      <input type="checkbox" id="card1" class="more" aria-hidden="true">
+      <div class="content">
+        
+        <div class="front">
+          <div class="inner">
+            <h2><b>Kanchenjunga Mountain</b></h2>
+
+            <label for="card1" class="button" aria-hidden="true">
+              Details
+            </label>
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <div class="info">
+              <span>1</span>
+
+            </div>
+
+
+
+            <div class="description">
+              <p>The Kanchenjunga mountain has a towering presence in Darjeeling. It is the main reason
+                why
+                Darjeeling, Gangtok and the surrounding areas of North Bengal and Sikkim get so many
+                tourists.
+                Kanchenjunga is the highest and most beautiful mountain peak in India, and the third
+                highest in the
+                world at 8586 meters. There are many viewpoints in Darjeeling from where we can get a
+                fantastic
+                view of the mountain on a clear day. The most popular of these places are Tiger Hill and
+                Batasia
+                Loop, and the best time is at sunrise when one can see the colours on the peak changing
+                from red to
+                pink to yellow and finally to white</p>
+              <p>We were lucky to get fabulous views of the entire Kanchenjunga range from Sandakphu,
+                which is the
+                highest peak in West Bengal, about 58 km from Darjeeling. The entire range is popularly
+                referred to
+                as the ‘Sleeping Buddha’ because of it’s appearance, with the head of the Buddha in the
+                west and
+                the feet in the east. Mt. Kumbhakarna forms the head and face, Mt. Pandim forms the feet
+                and Mt.
+                Kanchenjunga constitutes the belly of the Buddha.</p>
+            </div>
+
+            <label for="card1" class="button return" aria-hidden="true">
+              <i class="fas fa-arrow-left"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="how-to-go">
+      <h1><b>HOW TO GO </b></h1>
+      <p><b>There is no direct transport mode connectivity between Kolkata and Darjeeling. The cheapest way to
+          reach from Kolkata to Darjeeling is train to Patna Jn, then bus to Siliguri, then cab to Darjeeling and
+          takes 27h 19m. A direct train is also available to the station and covers 85.5 km of the distance by a
+          hired taxi. There are several trains that run between different parts of the country and ferry
+          passengers to Darjeeling, the closest station to reach Kanchenjunga.
+          Distance from Darjeeling Railway Station. 74.7 Km</b></p>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+  <div class="wrapper2">
+    <div class="card">
+      <input type="checkbox" id="card3" class="more">
+      <div class="content">
+        <div class="front"
+          style="background-image: url('pictures/sandakafu.png.jpg')">
+          <div class="inner">
+            <h2>Sandakphu</h2>
+
+            <label for="card3" class="button" aria-hidden="true">
+              Details
+            </label>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <div class="info">
+              <span>2</span>
+
+            </div>
+            <div class="description">
+              <p>Sandakphu (11,930 feet), also known as Sandakpur, is a small Himalayan hamlet situated on the top 
+                of a mountain peak in the Singalila Ridge and Singalila National Park (famous for red Panda) on the 
+                border between India and Nepal. Sandakphu is the highest point of West Bengal. Situated above the 
+                normal clouds level, Sandakphu summit offers a pristine view of four of the five highest peaks of the 
+                world, namely, Everest, Kanchenjunga (the entire range), Lhotse and Makalu on clear days. The 
+                mountain formation is famously known as 'Sleeping Buddha' as the appearance resembles the head, 
+                face, upper body and feet of the sage Lord Buddha. The azure sky, green forests and the massive 
+                snowcapped Himalayan peaks make the place a photographer's paradise and a nature lover's dream 
+                destination.
+                The only safe transport to Sandakphu is the local multi terrain vehicle Land Rover. The roads are good 
+                from Manebhanjan till Gairibas. After that, the last 12 kilometers' journey from Gairibas to 
+                Sandakphu is a nightmare. Being a trekking route, roads are almost nonexistent here. Even Land 
+                Rovers take nearly 1.5 hours to cover this 12 kms of bumpy, boulder filled narrow track. The road is 
+                dangerous and highly accident prone. We chose to visit the place on 30th December, ie, the middle 
+                of winter. The temperature was below freezing point (-3℃), a strong chilly wind was freezing us 
+                down to our bones, there was a cable fault resulting in no electricity and no room heater... but the 
+                surrealistic scenic beauty of the place compensated for all our discomforts. It was heavenly to watch 
+                Sleeping Buddha on a clear, full moon night followed by a spectacular sunrise on the following 
+                morning. Layers of warm garments failed to stop our shivering and chattering of teeth. But who 
+                cared when so much beauty was there in front for the eyes to behold?</p>
+
+            </div>
+
+            <label for="card3" class="button return" aria-hidden="true">
+              <i class="fas fa-arrow-left"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="how-to-go">
+      <h1><b>HOW TO GO </b></h1>
+      <p><b>There is no direct transport mode connectivity between Kolkata and Darjeeling. The cheapest way to
+          reach from Kolkata to Darjeeling is train to Patna Jn, then bus to Siliguri, then cab to Darjeeling and
+          takes 27h 19m. A direct train is also available to the station and covers 85.5 km of the distance by a
+          hired taxi. There are several trains that run between different parts of the country and ferry
+          passengers to Darjeeling, the closest station to reach Kanchenjunga.
+          Distance from Darjeeling Railway Station. 74.7 Km</b></p>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="wrapper2">
+    <div class="card">
+      <input type="checkbox" id="card2" class="more">
+      <div class="content">
+        <div class="front"
+          style="background-image: url('pictures/observaryhil.png.jpg')">
+          <div class="inner">
+            <h2>Observatory Hill</h2>
+
+            <label for="card2" class="button" aria-hidden="true">
+              Details
+            </label>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <div class="info">
+              <span>3</span>
+
+            </div>
+            <div class="description">
+              <p>The hill rising above Chowrasta is home to several much-visited temples, approached through a flurry
+                of colourful prayer flags and hanging bells. The main summit temple is sacred to Mahakala, a
+                Buddhist protector deity also worshipped as a wrathful avatar of Shiva. It is staffed by a Hindu priest
+                and Buddhist lama sitting side by side in an admirable display of religious coexistence. A 300m path
+                up to the summit starts about 100m along the eastern Mall road from Chowrasta.The several other
+                temples around the hilltop include a narrow cave with a Shiva lingam, signposted down steps to the
+                left as you approach the summit. Sadly no mountain panoramas from the top, but if you go back
+                down to the Mall and turn left (north) you'll soon reach a couple of viewpoints with
+                Khangchendzonga-view benches.
+                Observatory Hill was the original location of Bhutia Busty Gompa, whose monks may have given
+                Darjeeling its name calling their site dorje-ling (place of thunder).</p>
+
+            </div>
+
+            <label for="card2" class="button return" aria-hidden="true">
+              <i class="fas fa-arrow-left"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="how-to-go">
+      <h1><b>HOW TO GO </b></h1>
+      <p><b>There is no direct transport mode connectivity between Kolkata and Darjeeling. The cheapest way to
+          reach from Kolkata to Darjeeling is train to Patna Jn, then bus to Siliguri, then cab to Darjeeling and
+          takes 27h 19m. A direct train is also available to the station and covers 85.5 km of the distance by a
+          hired taxi. There are several trains that run between different parts of the country and ferry
+          passengers to Darjeeling, the closest station to reach Kanchenjunga.
+          Distance from Darjeeling Railway Station. 74.7 Km</b></p>
+    </div>
+  </div>
+
+
+
+  <div class="wrapper2">
+    <div class="card">
+      <input type="checkbox" id="card4" class="more">
+      <div class="content">
+        <div class="front"
+          style="background-image: url('pictures/durpinhil.png.jpg')">
+          <div class="inner">
+            <h2>Durpin Dara Hill:</h2>
+
+            <label for="card4" class="button" aria-hidden="true">
+              Details
+            </label>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <div class="info">
+              <span>4</span>
+
+            </div>
+            <div class="description">
+              <p>Durpin Dara is one of the two hills (dara in local language)(the other being Deolo Hill) connected by a 
+                ridge on which the town of Kalimpong stands. The hill is 1,372 metres (4,501 feet) above mean sea 
+                level and is located south west of the town. The hill commands a panoramic view overlooking the 
+                town of Kalimpong, the snow clad Himalayan ranges of West Sikkim, the Teesta River and its valleys 
+                and the Jelepla Pass in the distance. A golf course is also present just off the summit.
+                Atop the hill sits the Zang Dhok Palri Monastery which was consecrated by the Dalai Lama in 1976. 
+                The monastery holds in its reliquary 108 volumes of the Kangyur, as well as other holy books and 
+                scrolls that were moved out of Tibet after the Chinese invasion.</p>
+
+            </div>
+
+            <label for="card4" class="button return" aria-hidden="true">
+              <i class="fas fa-arrow-left"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="how-to-go">
+      <h1><b>HOW TO GO </b></h1>
+      <p><b>There is no direct transport mode connectivity between Kolkata and Darjeeling. The cheapest way to
+          reach from Kolkata to Darjeeling is train to Patna Jn, then bus to Siliguri, then cab to Darjeeling and
+          takes 27h 19m. A direct train is also available to the station and covers 85.5 km of the distance by a
+          hired taxi. There are several trains that run between different parts of the country and ferry
+          passengers to Darjeeling, the closest station to reach Kanchenjunga.
+          Distance from Darjeeling Railway Station. 74.7 Km</b></p>
+    </div>
+  </div>
+
+
+
+
+
+  
+  <div class="wrapper2">
+    <div class="card">
+      <input type="checkbox" id="card5" class="more">
+      <div class="content">
+        <div class="front"
+          style="background-image: url('pictures/susuniya.png.jpg')">
+          <div class="inner">
+            <h2>Susunia Hill</h2>
+
+            <label for="card5" class="button" aria-hidden="true">
+              Details
+            </label>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <div class="info">
+              <span>5</span>
+
+            </div>
+            <div class="description">
+              <p>Susunia hill nestles in southern West Bengal, India. On the way to Bankura- Purulia, this ancient hill is 
+                10 kilometers North-East of Chhatna which is 13 kilometers distant from Bankura town.
+                Amidst the spectacular landscape of lavish green and red soil, Susunia hill owns a height of 1200 feet 
+                approx. The hill is a popular place for its great archeological value. Listen to those ancient tales by 
+                mysterious fossils scattered over here and there, witness proud blinking of stone-age tools, see the 
+                ‘Oldest’ rock inscription of West Bengal and incredible beauty of nature. The river, Gandheswari 
+                keeps whispering always down the hill while the ‘Palash’ dominates the place with its fiery orange 
+                hue in seasons. Unwind your mind and breathe in the solitude of pristine Nature. Guests on wings 
+                like Asian Paradise Flycatcher, Indian Pitta and many more can be seen in this place. Susunia is a 
+                home to vibrants butterflies like Golden Angel, Tawny Raja, Spotted Swordtail etc.For a nature 
+                photographer, this place is a pure bliss in Spring as this natural sanctuary glows like a Diva then</p>
+
+            </div>
+
+            <label for="card5" class="button return" aria-hidden="true">
+              <i class="fas fa-arrow-left"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="how-to-go">
+      <h1><b>HOW TO GO </b></h1>
+      <p><b>Rail distance of Bankura from Kolkata is 233 km. Trains from Kolkata are available for Bankura on 
+        regular basis. From Bankura, you have to take cab to Susunia.</b></p>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="footer">
+        <div class="contain">
+            <div class="col">
+                <h2>Company</h2>
+                <ul>
+                    <li>About us</li>
+                    <li> Our Mission</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h2>Products</h2>
+                <ul>
+                    <li>SEO</li>
+                    <li>Content Development</li>
+                    <li>Digital Marketing</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h2>Team</h2>
+                <ul>
+                    <li>HR Team</li>
+                    <li>Finance Team</li>
+                    <li>Content Team</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Webmail</li>
+                    <li>Web templates</li>
+                    <li>Email templates</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h2>Contact</h2>
+                <ul>
+                    <li>+91 9051 XXXXXX</li>
+                    <li>033 2464 XXXX</li>
+                    <li>abc@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

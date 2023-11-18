@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forest</title>
+
+</head>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+
+        background-image: url(pictures/bb5.jpg);
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
+
+    .navbar {
+        width: 100%;
+        height: 10vh;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(3px);
+        box-shadow: 5px 5px 7px rgba(255, 252, 252, 0.8);
+
+    }
+
+    .navigation {
+
+        align-items: center;
+        padding: 2 1%;
+        margin-left: 7%;
+        padding-top: 17px;
+    }
+
+    .navbar h2 {
+        color: red;
+        width: 45%;
+        font-weight: bold;
+        opacity: 10;
+    }
+
+    .navbar .blue {
+        color: white;
+    }
+
+    .navbar ul {
+        width: 45%;
+        overflow: hidden;
+        margin-left: 45%;
+        margin-top: -17px;
+        font-size: 1.2rem;
+
+    }
+
+    .navbar li {
+        float: right;
+        list-style: none;
+
+    }
+
+    .navbar li a {
+        text-decoration: none;
+        padding: 25px;
+        color: white;
+        opacity: 10;
+    }
+
+
+
+
+
+    .navbar li a :hover {
+        color: rgb(250, 84, 54);
+
+
+    }
+
+    .heading {
+        width: 70%;
+        height: 20vh;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(1px);
+        box-shadow: 5px 5px 7px rgba(255, 255, 255, 0.8);
+        margin-top: 5%;
+        margin-left: 15%;
+        border-radius: 20px;
+    }
+
+    .heading h1 {
+        color: white;
+        text-align: center;
+        padding-top: 40px;
+        font-size: 4rem;
+    }
+
+    /* //cards */
+
+    .card {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        border-radius: 10px;
+
+        transition: 0.3s;
+       
+        /* background: #fff; */
+        background: rgba(53, 53, 53, 0.6);
+        backdrop-filter: blur(3px);
+        cursor: pointer;
+        margin-right: 30px;
+        margin-top: 9%;
+        box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+        margin-left: 10%;
+    }
+
+    .card:hover {
+        height: 520px;
+    }
+
+    .imgbox1 {
+        position: relative;
+        width: 70%;
+        height: 100%;
+        padding: 20px 20px;
+        transform: translateY(-80px);
+        z-index: 99;
+    }
+
+    .img1 {
+        width: 80%;
+        height: 40vh;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+        z-index: -7;
+        margin-left: 10%;
+
+    }
+
+    .content {
+
+        padding: 20px 60px;
+        text-align: center;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: 0.3s;
+        margin-top: -27%;
+        font-size: 1.04rem;
+        text-decoration: wavy;
+        color: aliceblue;
+    }
+
+    .card:hover>.content {
+        opacity: 99;
+        transform: translateY(-70px);
+    }
+
+
+
+    .name {
+        color: red;
+        padding-top: 60px;
+        
+        text-align: center;
+
+    }
+
+    .howtogo1 {
+        color: aliceblue;
+        float: right;
+        margin-top: -23%;
+        margin-right: 17%;
+        font-size: 1.5rem;
+    }
+
+    .howtogo1 :hover {
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .para1 {
+        color: aliceblue;
+        padding-right: 10%;
+        margin-left: 55%;
+        margin-top: -13%;
+        font-size: 1.2rem;
+    }
+
+
+
+  /* card2 */
+
+
+    .card2 {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        border-radius: 10px;
+
+        transition: 0.3s;
+        padding: 30px 50px;
+        /* background: #fff; */
+        background: rgba(61, 58, 58, 0.3);
+        backdrop-filter: blur(2px);
+        cursor: pointer;
+        color: aliceblue;
+        margin-top: 15%;
+        box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+        margin-left: 50%;
+    }
+
+    .card2:hover {
+        height: 520px;
+    }
+
+    .imgbox2 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-80px);
+        z-index: 99;
+    }
+
+    .img2 {
+        width: 100%;
+        height: 40vh;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+        z-index: -7;
+
+    }
+
+    .content2 {
+
+        padding: 10px 20px;
+        text-align: center;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: 0.3s;
+        margin-top: -25%;
+        font-size: 1.04rem;
+        text-decoration: wavy;
+    }
+
+    .card2:hover>.content2 {
+        opacity: 99;
+        transform: translateY(-70px);
+    }
+
+
+
+    .name2 {
+        color: red;
+        padding-top: 60px;
+        text-align: center;
+        font-size: 2rem;
+
+
+    }
+
+    .howtogo2 {
+        color: aliceblue;
+        margin-left: 15%;
+        margin-top: -23%;
+        font-size: 1.5rem;
+    }
+
+    .howtogo2 :hover {
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .para2 {
+        color: aliceblue;
+        padding-left: 10%;
+        margin-right: 55%;
+        padding-top: 20px;
+        font-size: 1.2rem;
+    }
+
+
+    
+
+
+    /* card3 */
+
+
+
+    .card3 {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        border-radius: 10px;
+
+        transition: 0.3s;
+        padding: 30px 50px;
+        /* background: #fff; */
+        background: rgba(70, 70, 70, 0.6);
+        backdrop-filter: blur(3px);
+        cursor: pointer;
+        margin-right: 30px;
+        margin-top: 20%;
+        box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+        margin-left: 10%;
+    }
+
+    .card3:hover {
+        height: 520px;
+    }
+
+    .imgbox3 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-80px);
+        z-index: 99;
+        margin-top: 1%;
+       
+    }
+
+    .img3 {
+        width: 100%;
+        height: 40vh;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+    }
+
+    .content3 {
+
+        padding: 10px 20px;
+        text-align: center;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: 0.3s;
+        margin-top: -25%;
+        font-size: 1.04rem;
+        text-decoration: wavy;
+        color: aliceblue;
+    }
+
+    .card3:hover>.content3 {
+        opacity: 99;
+        transform: translateY(-70px);
+    }
+
+
+
+    .name3 {
+        color: red;
+        padding-top: 50px;
+
+        text-align: center;
+        font-size: 2rem;
+
+
+    }
+
+    .howtogo3 {
+        color: aliceblue;
+        float: right;
+        margin-top: -23%;
+        margin-right: 17%;
+        font-size: 1.5rem;
+    }
+
+    .howtogo3 :hover {
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .para3 {
+        color: aliceblue;
+        padding-right: 10%;
+        margin-left: 55%;
+        margin-top: -13%;
+        font-size: 1.2rem;
+    }
+
+  /* cards4 */
+
+    .card4 {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        border-radius: 10px;
+
+        transition: 0.3s;
+        padding: 30px 50px;
+        /* background: #fff; */
+        background: rgba(61, 58, 58, 0.3);
+        backdrop-filter: blur(2px);
+        cursor: pointer;
+        color: aliceblue;
+        margin-top: 15%;
+        box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+        margin-left: 50%;
+    }
+
+    .card4:hover {
+        height: 620px;
+    }
+
+    .imgbox4 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-80px);
+        z-index: 99;
+    }
+
+    .img4 {
+        width: 100%;
+        height: 40vh;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+    }
+
+    .content4 {
+
+        padding: 10px 20px;
+        text-align: center;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: 0.3s;
+        margin-top: -50%;
+        font-size: 1.04rem;
+        text-decoration: wavy;
+    }
+
+    .card4:hover>.content4 {
+        opacity: 99;
+        transform: translateY(-70px);
+    }
+
+
+
+    .name4 {
+        color: red;
+        padding-top: 50px;
+
+        text-align: center;
+        font-size: 2rem;
+
+
+    }
+
+    .howtogo4 {
+        color: aliceblue;
+        margin-left: 15%;
+        margin-top: -23%;
+        font-size: 1.5rem;
+    }
+
+    .howtogo4 :hover {
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .para4 {
+        color: aliceblue;
+        padding-left: 10%;
+        margin-right: 55%;
+        padding-top: 20px;
+        font-size: 1.2rem;
+    }
+
+
+
+      /* card5 */
+
+    .card5 {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        border-radius: 10px;
+
+        transition: 0.3s;
+        padding: 30px 50px;
+        /* background: #fff; */
+        background: rgba(61, 61, 61, 0.3);
+        backdrop-filter: blur(3px);
+        cursor: pointer;
+        margin-right: 30px;
+        margin-top: 20%;
+        box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+        margin-left: 10%;
+        overflow: hidden;
+    }
+
+    .card5:hover {
+        height: 550px;
+    }
+
+    .circle1 {
+        width: 38%;
+        height: 23vh;
+        background-color: rgb(211, 161, 231);
+        backdrop-filter: blur(1px);
+        margin-top: -20%;
+        margin-left: -20%;
+        float: left;
+        border-radius: 80px;
+        z-index: -99;
+        opacity: 1;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .circle2 {
+        width: 30%;
+        height: 20vh;
+        background-color: red;
+        padding-right: -20%;
+        margin-bottom: 20%;
+        float: right;
+        border-radius: 50px;
+    }
+
+    .imgbox {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-80px);
+        z-index: 99;
+        flex: auto;
+        padding-top: 5%;
+    }
+
+    .img5 {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+
+    }
+
+    .content5 {
+
+        padding: 10px 20px;
+        text-align: center;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: 0.3s;
+        margin-top: -32%;
+        font-size: 1.04rem;
+        text-decoration: wavy;
+        color: aliceblue;
+        z-index: -99;
+    }
+
+    .card5:hover>.content5 {
+        opacity: 99;
+        transform: translateY(-70px);
+    }
+
+
+
+    .name5 {
+        color: red;
+        float: left;
+        font-size: 1.7rem;
+        margin-top: -3%;
+        padding: 2px 2px;
+        margin-left: 7%;
+        text-shadow: 2px 1px black;
+
+    }
+
+    .howtogo5 {
+        color: aliceblue;
+        float: right;
+        margin-top: -23%;
+        margin-right: 17%;
+        font-size: 1.5rem;
+    }
+
+    .howtogo5 :hover {
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .para5 {
+        color: aliceblue;
+        padding-right: 10%;
+        margin-left: 55%;
+        margin-top: -13%;
+        font-size: 1.2rem;
+    }
+
+    /* card6 */
+
+    .card6 {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        border-radius: 10px;
+
+        transition: 0.3s;
+        padding: 30px 50px;
+        /* background: #fff; */
+        background: rgba(61, 58, 58, 0.3);
+        backdrop-filter: blur(2px);
+        cursor: pointer;
+        color: aliceblue;
+        margin-top: 15%;
+        box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+        margin-left: 50%;
+    }
+
+    .card6:hover {
+        height: 620px;
+    }
+
+    .imgbox6 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-80px);
+        z-index: 99;
+    }
+
+    .img6 {
+        width: 100%;
+        height: 40vh;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+    }
+
+    .content6 {
+
+        padding: 10px 20px;
+        text-align: center;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: 0.3s;
+        margin-top: -50%;
+        font-size: 1.04rem;
+        text-decoration: wavy;
+    }
+
+    .card6:hover>.content6 {
+        opacity: 99;
+        transform: translateY(-70px);
+    }
+
+
+
+    .name6 {
+        color: red;
+        padding-top: 50px;
+
+        text-align: center;
+        font-size: 2rem;
+
+
+    }
+
+    .howtogo6 {
+        color: aliceblue;
+        margin-left: 15%;
+        margin-top: -23%;
+        font-size: 1.5rem;
+    }
+
+    .howtogo6 :hover {
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .para6 {
+        color: aliceblue;
+        padding-left: 10%;
+        margin-right: 55%;
+        padding-top: 20px;
+        font-size: 1.2rem;
+    }
+
+
+    /* card7 */
+
+
+    .card7 {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        border-radius: 10px;
+
+        transition: 0.3s;
+        padding: 30px 50px;
+        /* background: #fff; */
+        background: rgba(61, 61, 61, 0.3);
+        backdrop-filter: blur(3px);
+        cursor: pointer;
+        margin-right: 30px;
+        margin-top: 20%;
+        box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+        margin-left: 10%;
+        overflow: hidden;
+    }
+
+    .card7:hover {
+        height: 550px;
+    }
+
+    .circle1 {
+        width: 38%;
+        height: 23vh;
+        background-color: rgb(211, 161, 231);
+        backdrop-filter: blur(1px);
+        margin-top: -20%;
+        margin-left: -20%;
+        float: left;
+        border-radius: 80px;
+        z-index: -99;
+        opacity: 1;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .circle2 {
+        width: 30%;
+        height: 20vh;
+        background-color: red;
+        padding-right: -20%;
+        margin-bottom: 20%;
+        float: right;
+        border-radius: 50px;
+    }
+
+    .imgbox7 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-80px);
+        z-index: 99;
+        flex: auto;
+        padding-top: 5%;
+    }
+
+    .img7 {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+
+    }
+
+    .content7 {
+
+        padding: 10px 20px;
+        text-align: center;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: 0.3s;
+        margin-top: -32%;
+        font-size: 1.04rem;
+        text-decoration: wavy;
+        color: aliceblue;
+        z-index: -99;
+    }
+
+    .card7:hover>.content7 {
+        opacity: 99;
+        transform: translateY(-70px);
+    }
+
+
+
+    .name7 {
+        color: red;
+        font-size: 1.9rem;
+        padding: 2px 2px;
+        text-align: start;
+        text-shadow: 2px 1px black;
+        margin-top: 7%;
+        text-align: center;
+
+    }
+
+    .howtogo7 {
+        color: aliceblue;
+        float: right;
+        margin-top: -23%;
+        margin-right: 17%;
+        font-size: 1.5rem;
+    }
+
+    .howtogo7 :hover {
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .para7 {
+        color: aliceblue;
+        padding-right: 10%;
+        margin-left: 55%;
+        margin-top: -13%;
+        font-size: 1.2rem;
+    }
+
+    /* card8 */
+
+    .card8 {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        border-radius: 10px;
+
+        transition: 0.3s;
+        padding: 30px 50px;
+        /* background: #fff; */
+        background: rgba(61, 58, 58, 0.3);
+        backdrop-filter: blur(2px);
+        cursor: pointer;
+        color: aliceblue;
+        margin-top: 15%;
+        box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+        margin-left: 50%;
+        overflow: hidden;
+    }
+
+    .card8:hover {
+        height: 620px;
+    }
+
+    .circle8{
+       width: 20%;
+       height: 12vh;
+       background-color: rgb(190, 255, 165);
+       backdrop-filter: blur(1px);
+       border-radius: 50px;
+       margin-top: -18%;
+       float: right;
+       margin-right: -7%;
+    }
+
+
+    .imgbox8 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-80px);
+        z-index: 99;
+    }
+
+    .img8 {
+        width: 100%;
+        height: 40vh;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+    }
+
+    .content8 {
+
+        padding: 10px 20px;
+        text-align: center;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: 0.3s;
+        margin-top: -50%;
+        font-size: 1.04rem;
+        text-decoration: wavy;
+        text-shadow:2px 2px 2px 2px  black;
+    }
+
+    .card8:hover>.content8 {
+        opacity: 99;
+        transform: translateY(-70px);
+    }
+
+
+
+    .name8 {
+        color: red;
+        padding-top: 50px;
+
+        text-align: center;
+        font-size: 1.9rem;
+
+
+    }
+
+    .howtogo8 {
+        color: aliceblue;
+        margin-left: 15%;
+        margin-top: -23%;
+        font-size: 1.5rem;
+    }
+
+    .howtogo8 :hover {
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .para8 {
+        color: aliceblue;
+        padding-left: 10%;
+        margin-right: 55%;
+        padding-top: 20px;
+        font-size: 1.2rem;
+    }
+
+    /* card9 */
+    .card9 {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        border-radius: 10px;
+
+        transition: 0.3s;
+        padding: 30px 50px;
+        /* background: #fff; */
+        background: rgba(61, 61, 61, 0.3);
+        backdrop-filter: blur(3px);
+        cursor: pointer;
+        margin-right: 30px;
+        margin-top: 20%;
+        box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+        margin-left: 10%;
+        overflow: hidden;
+    }
+
+    .card9:hover {
+        height: 550px;
+    }
+
+   .circle9{
+     width: 25%;
+     height: 15vh;
+     background-color: blueviolet;
+     border-radius: 60px;
+     margin-left: -20%;
+     margin-top: -20%;
+     box-shadow: 5px 5px 10px rgba(3, 3, 3, 0.5);
+     backdrop-filter: blur(1px);
+   }
+
+   .circle7{
+    width: 50%;
+    height: 30vh;
+    background-color: #FF0063;
+    border-radius: 60px;
+    float: right;
+    box-shadow: 5px 5px 10px rgba(3, 3, 3, 0.5);
+   }
+    .imgbox9 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-80px);
+        z-index: 99;
+        flex: auto;
+        padding-top: 5%;
+    }
+
+    .img9 {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+
+    }
+
+    .content9 {
+
+        padding: 10px 20px;
+        text-align: center;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: 0.3s;
+        margin-top: -32%;
+        font-size: 1.04rem;
+        text-decoration: wavy;
+        color: aliceblue;
+        z-index: -99;
+    }
+
+    .card9:hover>.content9 {
+        opacity: 99;
+        transform: translateY(-70px);
+    }
+
+
+
+    .name9 {
+        color: red;
+        font-size: 1.9rem;
+        padding: 2px 2px;
+        text-align: start;
+        text-shadow: 2px 1px black;
+        margin-top: 7%;
+        text-align: center;
+
+    }
+
+    .howtogo9 {
+        color: aliceblue;
+        float: right;
+        margin-top: -23%;
+        margin-right: 17%;
+        font-size: 1.5rem;
+    }
+
+    .howtogo9 :hover {
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .para9 {
+        color: aliceblue;
+        padding-right: 10%;
+        margin-left: 55%;
+        margin-top: -13%;
+        font-size: 1.2rem;
+    }
+
+    /* card10 */
+
+    .card10 {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        border-radius: 10px;
+
+        transition: 0.3s;
+        padding: 30px 50px;
+        /* background: #fff; */
+        background: rgba(61, 58, 58, 0.3);
+        backdrop-filter: blur(2px);
+        cursor: pointer;
+        color: aliceblue;
+        margin-top: 10%;
+        box-shadow: 5px 5px 10px rgba(255, 37, 37, 0.5);
+        margin-left: 50%;
+        overflow: hidden;
+    }
+
+    .circle10 {
+        width: 30%;
+        height: 18vh;
+        background: rgba(252, 235, 7, 0.897);
+        border-radius: 60px;
+        z-index: -99;
+        margin-top: -25%;
+        margin-left: 81%;
+        box-shadow: 1px 1px 1px 2px rgb(0, 0, 0);
+        backdrop-filter: blur(1px);
+    }
+
+    .circle11 {
+        width: 50%;
+        height: 26vh;
+        border-radius: 100px;
+        background: rgba(45, 255, 238, 0.4);
+        float: left;
+        margin-top: 20%;
+        z-index: -9;
+        margin-left: -45%;
+        backdrop-filter: blur(1px);
+        box-shadow: 1px 1px 1px 2px rgb(0, 0, 0);
+    }
+
+    .card10:hover {
+        height: 620px;
+    }
+
+    .imgbox10 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-80px);
+        z-index: 99;
+    }
+
+    .img10 {
+        width: 100%;
+        height: 40vh;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+    }
+
+    .content10 {
+
+        padding: 10px 20px;
+        text-align: center;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: 0.3s;
+        margin-top: -50%;
+        font-size: 1.04rem;
+        text-decoration: wavy;
+    }
+
+    .card10:hover>.content10 {
+        opacity: 99;
+        transform: translateY(-70px);
+    }
+
+
+
+    .name10 {
+        color: red;
+        padding-top: 50px;
+        opacity: 99;
+        text-align: center;
+        font-size: 1.9rem;
+        text-shadow: 3px 3px 3px 3px black;
+
+    }
+
+    .howtogo10 {
+        color: aliceblue;
+        margin-left: 15%;
+        margin-top: -23%;
+        font-size: 1.5rem;
+    }
+
+    .howtogo10 :hover {
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .para10 {
+        color: aliceblue;
+        padding-left: 10%;
+        margin-right: 55%;
+        padding-top: 20px;
+        font-size: 1.2rem;
+    }
+
+
+    /* footer */
+
+    .footer {
+        width: 100%;
+        background-color: black;
+        height: 30vh;
+        margin-top: 20%;
+        box-shadow: 2px 2px 2px 5px red;
+
+    }
+
+    .contain {
+        margin-bottom: 50px;
+    }
+
+    .footer .col {
+        width: 190px;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .footer .col h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        line-height: 17px;
+        padding: 10px 0;
+        color: #FF0063;
+        text-transform: uppercase;
+    }
+
+    .footer .col ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .footer .col ul li {
+        color: white;
+        font-size: 12px;
+        padding: 5px 0px;
+    }
+
+    .address ul li {
+        display: inline-block;
+        padding-right: 5px !important;
+    }
+
+    .footer .col ul li:hover {
+        cursor: pointer;
+        color: lightgray;
+        font-weight: bold;
+    }
+
+    .clearfix {
+        clear: both;
+    }
+
+    @media only screen and (min-width: 1280px) {
+        .contain {
+            width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+    @media only screen and (max-width: 1139px) {
+        .contain .address {
+            width: 1000px;
+            display: block;
+        }
+
+        .address h2 {
+            margin: 0px;
+        }
+    }
+
+    @media only screen and (max-width: 950px) {
+        .footer .col {
+            width: 33%;
+        }
+
+        .footer .col h2 {
+            font-size: 14px;
+        }
+
+        .footer .col ul li {
+            font-size: 13px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .footer .col {
+            width: 50%;
+        }
+
+        .footer .col h2 {
+            font-size: 14px;
+        }
+
+        .footer .col ul li {
+            font-size: 13px;
+        }
+    }
+
+    @media only screen and (max-width: 340px) {
+        .footer .col {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="navigation">
+                <h2><span class="blue">Travel</span>Ez</h2>
+                <ul>
+
+                    <li><a href="#"> <b>GELLARY</b></a></li>
+                    <li><a href="#"><b>ABOUT</b></a></li>
+                    <li><a href="#"><b>FEEDBACK</b></a></li>
+                    <li><a href="#"> <b>HOME</b></a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="heading">
+        <h1><b>FOREST</b></h1>
+    </div>
+
+    <div class="card">
+
+        <div class="imgbox">
+            <h1 class="name">BUXA</h1>
+            <img class="img1" src="\pictures\boxa.png" />
+        </div>
+
+        <div class="content">
+            <!-- <h2>keep Smiling</h2> -->
+            <p>
+                Buxa Tiger Reserve is a wildlife sanctuary located in the Buxa hills of the Eastern Himalayas in
+                West Bengal, India. The reserve is famous for its diverse wildlife, including the Royal Bengal Tiger,
+                Asian elephant,
+                Indian rhinoceros, clouded leopard, and many other species of mammals, reptiles, and birds. The Buxa
+                hills are also
+                home to several indigenous tribes, including the Lepchas, Rajbanshis, and Bhutias
+            </p>
+        </div>
+    </div>
+
+    <div class="howtogo1">
+    <h1><b>HOW TO GO</b></h1>
+</div>
+<div class="para1"><b>  Take a train from Howrah to Alipurduar Junction, and then take a taxi or bus to Buxa Tiger Reserve.
+    </b></div>
+
+
+
+    <div class="card2">
+
+        <div class="imgbox2">
+            <h1 class="name2">Jaldapara National Park</h1>
+            <img class="img2" src="\pictures\jalda.png" />
+        </div>
+
+        <div class="content2">
+           
+            <p>
+                Jaldapara National Park is a wildlife sanctuary located in the Alipurduar district of West
+                Bengal, India. It is famous for its population of one-horned Indian rhinoceroses. The best time to visit
+                is between
+                October and May when the weather is pleasant and the wildlife is most active. However, the monsoon
+                season from
+                June to September can also be a great time to visit, as the forest is lush and green during this time.
+            </p>
+        </div>
+    </div>
+
+    <div class="howtogo2">
+    <h1><b>HOW TO GO</b></h1>
+</div>
+<div class="para2"><b>  Take a train from Howrah to New Jalpaiguri Station, and then take a taxi or bus to Jaldapara National 
+    Park.
+    </b></div>
+
+
+
+
+    <div class="card3">
+
+        <div class="imgbox3">
+            <h1 class="name3">Gorumara National Park</h1>
+            <img class="img3" src="pictures/goru.png" />
+        </div>
+
+        <div class="content3">
+            <!-- <h2>keep Smiling</h2> -->
+            <p>
+                Buxa Tiger Reserve is a wildlife sanctuary located in the Buxa hills of the Eastern Himalayas in
+                West Bengal, India. The reserve is famous for its diverse wildlife, including the Royal Bengal Tiger,
+                Asian elephant,
+                Indian rhinoceros, clouded leopard, and many other species of mammals, reptiles, and birds. The Buxa
+                hills are also
+                home to several indigenous tribes, including the Lepchas, Rajbanshis, and Bhutias
+            </p>
+        </div>
+    </div>
+
+    <div class="howtogo3">
+    <h1><b>HOW TO GO</b></h1>
+</div>
+<div class="para3"><b>Take a train from Howrah to New Jalpaiguri Station, and then take a taxi or bus to Gorumara National 
+    Park.
+    </b></div>
+
+
+
+    <div class="card4">
+
+        <div class="imgbox4">
+            <h1 class="name4">Sundarbans National Park</h1>
+            <img class="img4" src="pictures/sundarbon.png" />
+        </div>
+
+        <div class="content4">
+            <!-- <h2>keep Smiling</h2> -->
+            <p>
+                Sundarbans National Park is a UNESCO World Heritage Site located in the delta region of
+                the Ganges, Brahmaputra, and Meghna rivers in India and Bangladesh. The park is famous for its mangrove
+                forests,
+                which are the largest in the world and provide a unique habitat for a wide variety of flora and fauna.
+                It is home to the
+                Royal Bengal Tiger, estuarine crocodile, Indian python, spotted deer, and many species of birds,
+                including the
+                endangered white-bellied sea eagle. The best time to visit is between October and March when the weather
+                is
+                pleasant and the wildlife is most active. However, the park is closed during the monsoon season from
+                June to
+                September due to heavy rainfall and flooding.
+            </p>
+        </div>
+    </div>
+    </div>
+
+    <div class="howtogo4">
+        <h1><b>HOW TO GO</b></h1>
+    </div>
+    <div class="para4"><b>Take a train from Howrah to Canning Station,
+            and then take a boat to Sundarbans National Park.</b></div>
+
+            <!-- card5 -->
+    <div class="card5">
+        <span class="circle1"></span>
+
+
+        <div class="imgbox">
+            <h1 class="name5">Neora Valley National Park</h1>
+            <img class="img5" src="pictures\neora1.png" />
+        </div>
+
+        <div class="content5">
+            <!-- <h2>keep Smiling</h2> -->
+            <p>
+                Neora Valley National Park is a protected area located in the Kalimpong district of West
+                Bengal, India. The park is situated in the Eastern Himalayas and is famous for its unique ecosystems,
+                which include
+                dense forests, rolling hills, and meadows. It is home to several endangered species, including the red
+                panda, clouded
+                leopard, Asiatic black bear, and many species of birds. The best time to visit is between October and
+                May when the
+                weather is pleasant and the wildlife is most active.
+            </p>
+            <span class="circle2"></span>
+        </div>
+
+    </div>
+    <div class="howtogo5">
+        <h1><b>HOW TO GO</b></h1>
+    </div>
+    <div class="para5"><b> Take a train from Howrah to New Mal Junction,
+            and then take a taxi or bus to Neora Valley National Park.</b></div>
+
+    <!-- card6 -->
+
+    <div class="card6">
+
+        <div class="imgbox6">
+            <h1 class="name6">.Singalila National Park</h1>
+            <img class="img6" src="pictures\singalila.png" />
+        </div>
+
+        <div class="content6">
+            <!-- <h2>keep Smiling</h2> -->
+            <p>
+                Singalila National Park is a protected area located in the Darjeeling district of West Bengal,
+                India. The park is situated at an altitude of 7000 feet above sea level and is home to a wide variety of
+                flora and fauna,
+                including the red panda, Himalayan black bear, clouded leopard, and many species of birds. The park is
+                also famous for
+                its rhododendron forests, which bloom in the spring and create a beautiful display of colors. The best
+                time to visit
+                Singalila National Park is between March and May when the weather is pleasant and the rhododendrons are
+                in full
+                bloom
+            </p>
+        </div>
+    </div>
+
+    <div class="howtogo6">
+        <h1><b>HOW TO GO</b></h1>
+    </div>
+    <div class="para6"><b> Take a train from Howrah to New Jalpaiguri Station, and then take a taxi or bus to Singalila
+            National
+            Park</b>
+    </div>
+
+
+    <!-- card7 -->
+
+
+    <div class="card7">
+
+        <div class="imgbox7">
+            <h1 class="name7">Mahananda Wildlife Sanctuary</h1>
+            <img class="img7" src="pictures\maha.png" />
+        </div>
+
+        <div class="content7">
+            <!-- <h2>keep Smiling</h2> -->
+            <p> Mahananda Wildlife Sanctuary is a protected area located in the Darjeeling district
+                of West Bengal, India. The sanctuary is situated on the foothills of the Himalayas and is home to
+                several species of
+                animals, including the Indian rhinoceros, Indian elephant, Bengal tiger, and many species of birds. The
+                sanctuary is
+                also famous for its lush green forests, rolling hills, and beautiful landscapes. The best time to visit
+                Mahananda
+                Wildlife Sanctuary is between October and May when the weather is pleasant and the wildlife is most
+                active.
+            </p>
+        </div>
+    </div>
+
+    <div class="howtogo7">
+        <h1><b>HOW TO GO</b></h1>
+    </div>
+    <div class="para7"><b>Take a train from Howrah to New Jalpaiguri Station, and then take a taxi or bus to Mahananda
+            Wildlife
+            Sanctuary.
+        </b></div>
+
+
+
+    <!-- card8 -->
+
+
+
+    <div class="card8">
+       <div class="circle8"></div>
+        <div class="imgbox8">
+            <h1 class="name8">Chapramari Wildlife Sanctuary</h1>
+            <img class="img8" src="pictures\chaprimara.png" />
+        </div>
+
+        <div class="content8">
+            <!-- <h2>keep Smiling</h2> -->
+            <p> Chapramari Wildlife Sanctuary is a protected area located in the Jalpaiguri district
+                of West Bengal, India. The sanctuary is situated on the banks of the Murti River and is home to several
+                species of
+                animals, including the Indian rhinoceros, Indian elephant, Bengal tiger, and many species of birds. The
+                sanctuary is
+                also famous for its lush green forests, rolling hills, and beautiful meadows. The sanctuary is also an
+                important corridor
+                for the movement of elephants and other animals between the Buxa and Gorumara National Parks. The best
+                time to
+                visit Chapramari Wildlife Sanctuary is between October and May when the weather is pleasant and the
+                wildlife is
+                most active.
+            </p>
+        </div>
+    </div>
+
+    <div class="howtogo8">
+        <h1><b>HOW TO GO</b></h1>
+    </div>
+    <div class="para8"><b> Take a train from Howrah to New Jalpaiguri Station, and then take a taxi or bus to Chapramari
+            Wildlife
+            Sanctuary
+        </b></div>
+
+
+
+    <!-- card9 -->
+
+
+    <div class="card9">
+        <div class="circle9"></div>
+        <div class="imgbox9">
+            <h1 class="name9">Ballavpur Wildlife Sanctuary</h1>
+            <img class="img9" src="pictures\ballavpur.png" />
+        </div>
+
+        <div class="content9">
+            <!-- <h2>keep Smiling</h2> -->
+            <p> This wildlife sanctuary is located in Bolpur Santiniketan. This Wildlife Sanctuary is
+                home to three large water bodies (Jheel) which hosts migratory as well as resident birds in plenty. It
+                is home to
+                numerous Cheethals (Spotted Deer), Blackbuck and other resident animals like jackals and foxes.
+            </p>
+            <div class="circle7"></div>
+        </div>
+    </div>
+
+    <div class="howtogo9">
+        <h1><b>HOW TO GO</b></h1>
+    </div>
+    <div class="para9"><b> The nearest railway station is Bolpur-Santiniketan. You can get many Trains from Howrah and
+            Sealdah
+            railway stations. After reaching Bolpur-Santiniketan station, you need to take a local Toto, Rickshaw to
+            reach the
+            exact location.
+        </b></div>
+
+
+    <!-- card10 -->
+
+    <div class="card10">
+        <div class="circle10"></div>
+        <div class="imgbox10">
+            <h1 class="name10"> Bhutanghat Wildlife Sanctuary</h1>
+            <img class="img10" src="pictures\bhutanghat.png" />
+        </div>
+
+        <div class="content10">
+            <div class="circle11"></div>
+            <!-- <h2>keep Smiling</h2> -->
+            <p> Located in Jalpaiguri district of West Bengal, Bhutanghat is situated in the
+                mountainous terrain along the river Raidak near the Indo-Bhutan border and is around 45 km from
+                Alipurduar.
+                Known for its pristine evergreen forests, rolling tea gardens and mesmerizing natural beauty, this
+                picturesque
+                little hamlet is home to many rare animals, including the one-horned Asiatic rhino, leopards and spotted
+                deer,
+                making it a must-visit offbeat destination for all wildlife aficionados.
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="howtogo10">
+        <h1><b>HOW TO GO</b></h1>
+    </div>
+    <div class="para10"><b> Take a train from Howrah to New Mal Junction, and then take a taxi or bus to Bhutanghat
+            Wildlife
+            Sanctuary.
+        </b></div>
+
+
+    <!-- Site footer -->
+
+    <footer>
+        <div class="footer">
+            <div class="contain">
+                <div class="col">
+                    <h2>Company</h2>
+                    <ul>
+                        <li>About us</li>
+                        <li> Our Mission</li>
+                        <li>Services</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Products</h2>
+                    <ul>
+                        <li>SEO</li>
+                        <li>Content Development</li>
+                        <li>Digital Marketing</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Team</h2>
+                    <ul>
+                        <li>HR Team</li>
+                        <li>Finance Team</li>
+                        <li>Content Team</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Resources</h2>
+                    <ul>
+                        <li>Webmail</li>
+                        <li>Web templates</li>
+                        <li>Email templates</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Contact</h2>
+                    <ul>
+                        <li>+91 9051 XXXXXX</li>
+                        <li>033 2464 XXXX</li>
+                        <li>abc@gmail.com</li>
+                    </ul>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
